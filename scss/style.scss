@@ -1,0 +1,24 @@
+@import 'utils/variables';
+@import 'utils/mixins';
+@import 'utils/helpers';
+
+@import "base/reset";
+@import "base/fonts";
+
+//@import "vendor/bootstrap";
+//@import "vendor/bootsnav";
+//@import "vendor/animate";
+//@import "vendor/jquery.formstyler";
+//@import "vendor/fancybox";
+//@import "vendor/slick";
+//@import "vendor/mCustomScrollbar";
+
+@import "layout/common";
+@import "layout/animation";
+@import "layout/header";
+@import "layout/footer";
+@import "layout/content";
+@import "layout/btn";
+@import "layout/partials";
+@import "layout/forms";
+
