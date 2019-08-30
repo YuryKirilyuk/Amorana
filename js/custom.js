@@ -41,24 +41,23 @@ $(window).on('load', function () {
 /* ==========================================================================
    When the window is resized, do
    ========================================================================== */
-   
-	$(window).resize(function() {
 
-        		
+	$(window).resize(function() {
+        if ($('.section-plans').length > 0) {
+            setPlanNavState();
+
+            if($(window).width() > '768'){
+                plansNav.removeClass('fixed');
+            }
+        }
+
+
 	});
 
 
 
 
 $(function(){
-
-    /*
-	$('.button-nav').click(function(){
-		$(this).toggleClass('active');
-		$('.main-nav-list').slideToggle(); 
-		return false;
-	});
-    */
 
     $('.plans-nav a[href^="#"]').click(function(){
         var target = $(this).attr('href');
