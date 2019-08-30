@@ -1,7 +1,8 @@
 if ($('.section-plans').length > 0) {
-    var plansNav = $('.plans-nav');
-    var navOffset = plansNav.offset();
-    var navOffsetTop = navOffset.top;
+    var plansNav = $('.plans-nav'),
+        navOffset = plansNav.offset(),
+        navOffsetTop = navOffset.top;
+
     var plansListHeight = $('.plans-list').height();
     var windowScrollTop = $(window).scrollTop();
 
@@ -62,6 +63,7 @@ $(function(){
     $('.plans-nav a[href^="#"]').click(function(){
         var target = $(this).attr('href');
         $('html, body').animate({scrollTop: $(target).offset().top-45}, 500);
+
         return false;
     });
 
