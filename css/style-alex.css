@@ -1,0 +1,268 @@
+.section-plans {
+    overflow: hidden;
+    position: relative;
+}
+
+    .plans-transparent-bg {
+        background: url(../img/transparent-bg.png) repeat center;
+        height: 100%;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: opacity .5s;
+        width: 100vw;
+    }
+
+    .section-plans.active .plans-transparent-bg {
+        opacity: 1;
+        z-index: 2;
+    }
+
+    .section-plans .plan-image {
+        position: relative;
+    }
+
+    .section-plans .plan-dots {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    .plan-dots .plan-dot {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 0;
+    }
+
+    .plan-dots .plan-dot.active {
+        z-index: 2;
+    }
+
+    .plan-dots .plan-dot.first {
+        top: 1vw;
+    }
+
+    .plan-dots .plan-dot.second {
+        top: 25vw;
+    }
+
+    .plan-dots .plan-dot.third {
+        top: 14vw;
+    }
+
+    .premium-plan .plan-dots .plan-dot.first {
+        top: 0;
+    }
+
+    .premium-plan .plan-dots .plan-dot.second {
+        top: 26vw;
+    }
+
+    .premium-plan .plan-dots .plan-dot.third {
+        top: 12vw;
+    }
+
+    .deluxe-plan .plan-dots .plan-dot.first {
+        top: 7vw;
+    }
+
+    .deluxe-plan .plan-dots .plan-dot.second {
+        top: 32vw;
+    }
+
+    .deluxe-plan .plan-dots .plan-dot.third {
+        top: 20vw;
+    }
+
+    @media (min-width: 374px){
+        .plan-dots .plan-dot.first {
+            top: 10px;
+        }
+
+        .plan-dots .plan-dot.second {
+            top: 100px;
+        }
+
+        .plan-dots .plan-dot.third {
+            top: 60px;
+        }
+
+        .premium-plan .plan-dots .plan-dot.first {
+            top: 0;
+        }
+
+        .premium-plan .plan-dots .plan-dot.second {
+            top: 95px;
+        }
+
+        .premium-plan .plan-dots .plan-dot.third {
+            top: 45px;
+        }
+
+        .deluxe-plan .plan-dots .plan-dot.first {
+            top: 25px;
+        }
+
+        .deluxe-plan .plan-dots .plan-dot.second {
+            top: 120px;
+        }
+
+        .deluxe-plan .plan-dots .plan-dot.third {
+            top: 75px;
+        }
+    }
+
+        .plan-dots .plan-dot .dot {
+            background: rgba(225, 0, 49, 0.7);
+            border: 2px solid #fff;
+            border-radius: 100%;
+            box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+            height: 30px;
+            position: absolute;
+            top: 0;
+            transition: all .5s;
+            width: 30px;
+            z-index: 1;
+        }
+
+        .plan-dots .plan-dot.first .dot {
+            left: 51%;
+        }
+
+        .plan-dots .plan-dot.second .dot {
+            left: 26%;
+        }
+
+        .plan-dots .plan-dot.third .dot {
+            left: 66%;
+        }
+
+        .premium-plan .plan-dots .plan-dot.first .dot {
+            left: 52%;
+        }
+
+        .premium-plan .plan-dots .plan-dot.second .dot {
+            left: 22%;
+        }
+
+        .premium-plan .plan-dots .plan-dot.third .dot {
+            left: 67%;
+        }
+
+        .deluxe-plan .plan-dots .plan-dot.first .dot {
+            left: 51%;
+        }
+
+        .deluxe-plan .plan-dots .plan-dot.second .dot {
+            left: 18%;
+        }
+
+        .deluxe-plan .plan-dots .plan-dot.third .dot {
+            left: 68%;
+        }
+
+        @media (min-width: 374px){
+            .plan-dots .plan-dot.first .dot {
+                left: 170px;
+            }
+
+            .plan-dots .plan-dot.second .dot {
+                left: 85px;
+            }
+
+            .plan-dots .plan-dot.third .dot {
+                left: 220px;
+            }
+
+            .premium-plan .plan-dots .plan-dot.first .dot {
+                left: 175px;
+            }
+
+            .premium-plan .plan-dots .plan-dot.second .dot {
+                left: 75px;
+            }
+
+            .premium-plan .plan-dots .plan-dot.third .dot {
+                left: 225px;
+            }
+
+            .deluxe-plan .plan-dots .plan-dot.first .dot {
+                left: 170px;
+            }
+
+            .deluxe-plan .plan-dots .plan-dot.second .dot {
+                left: 60px;
+            }
+
+            .deluxe-plan .plan-dots .plan-dot.third .dot {
+                left: 235px;
+            }
+        }
+
+        .plan-dots .plan-dot.active .dot {
+            background: rgba(255, 255, 255, .9);
+            border-color: rgba(255, 255, 255, .9);
+        }
+
+            .plan-dots .plan-dot .dot:before {
+                background: #fff;
+                border-radius: 100%;
+                content: '';
+                height: 12px;
+                margin: auto;
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                transition: all .5s;
+                width: 12px;
+            }
+
+            .plan-dots .plan-dot.active .dot:before {background: #FF0000;}
+
+            .plan-dots .plan-dot .dot:after {
+                background: url(../img/dot-arrow.svg) center no-repeat;
+                content: '';
+                height: 98px;
+                opacity: 0;
+                position: absolute;
+                top: 12px;
+                left: -12px;
+                transition: all .5s;
+                width: 25px;
+            }
+
+            .plan-dots .plan-dot.active .dot:after {
+                opacity: 1;
+            }
+
+        .plan-dots .plan-dot .dot-content {
+            color: #fff;
+            display: none;
+            font-size: 14px;
+            line-height: 21px;
+            opacity: 0;
+            padding: 125px 30px 0;
+            transform: scale(0);
+            transition: all .5s;
+        }
+
+        .plan-dots .plan-dot.active .dot-content {
+            display: block;
+            opacity: 1;
+            transform: scale(1);
+        }
+
+            .plan-dots .plan-dot .dot-content .btn-close {
+                background: url(../img/icons/icon-close.svg) no-repeat center;
+                height: 24px;
+                position: absolute;
+                top: 105%;
+                right: 30px;
+                width: 24px;
+            }
