@@ -18,3 +18,26 @@
   font-weight: bold;
   font-style: normal;
 }
+@font-face {
+  font-family: 'Palatino';
+  src: url('../fonts/palai.eot');
+  src: url('../fonts/palai.eot') format('embedded-opentype'),
+    url('../fonts/palai.woff2') format('woff2'),
+    url('../fonts/palai.woff') format('woff'),
+    url('../fonts/palai.ttf') format('truetype'),
+    url('../fonts/palai.svg#palai') format('svg');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Aston Script';
+  src: url('../fonts/aston_script-webfont.eot');
+  src: url('../fonts/aston_script-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/aston_script-webfont.woff2') format('woff2'),
+    url('../fonts/aston_script-webfont.woff') format('woff'),
+    url('../fonts/aston_script-webfont.ttf') format('truetype'),
+    url('../fonts/aston_script-webfont.svg#aston_scriptregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
