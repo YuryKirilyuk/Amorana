@@ -8,8 +8,11 @@ section {
 
 h3.section-title {
   font-size: 2.4rem;
-  font-weight: bold;
+  font-weight: normal;
   margin-bottom: 1.5rem;
+  @media screen and (min-width: 769px) {
+    font-size: 3.6rem;
+  }
   @media screen and (max-width: 480px) {
     text-align: center;
   }
@@ -143,38 +146,49 @@ h3.section-title {
   text-align: center;
 
   .image-wrap {
-    height: 147px;
+    //height: 147px;
     left: -25px;
     position: absolute;
     top: 12rem;
     transform: rotateZ(196deg);
     width: 160px;
+    @media screen and (min-width: 1024px) {
+      left: -45px;
+      top: 0;
+      width: 317px;
+    }
   }
 
   .section-title {
-    font-family: $custom-font-family;
+    //font-family: $custom-font-family;
     font-size: 2rem;
-    font-weight: normal;
+    font-weight: 300;
     line-height: 1.25;
-    margin: 0 auto 1.8rem;
-    @media screen and (max-width: 480px) {
-      max-width: 27rem;
+    margin: 0 auto 7.8rem;
+    @media screen and (min-width: 768px) {
+      font-size: 3.6rem;
+    }
+    @media screen and (max-width: 768px) {
+      margin-bottom: 1.8rem;
     }
   }
 
 
   .features-list {
+    align-items: center;
+    display: flex;
     font-family: $custom-font-family;
     font-size: 1.5rem;
-    max-width: 205px;
-    margin: auto;
+    justify-content: space-between;
+    @media screen and (max-width: 880px) {
+      flex-direction: column;
+    }
 
     .feature {
+      background: url(../img/plants.svg) no-repeat center top;
+      max-width: 19.5rem;
       padding-bottom: 1rem;
-      &:not(:first-child) {
-        background: url(../img/plants.svg) no-repeat center top;
-        padding-top: 2.3rem;
-      }
+      padding-top: 2.3rem;
     }//.feature
   }//.features-list
 
@@ -200,11 +214,17 @@ h3.section-title {
 
 .section-plans {
   padding: 6rem 0 7rem;
+  @media screen and (min-width: 1025px) {
+    padding-top: 10rem;
+  }
 
   .image-wrap {
     position: absolute;
     right: 1.5rem;
     top: 0;
+    @media screen and (max-width: 1024px) {
+      max-width: 11rem;
+    }
   }
 
   .image-wrap_1 {
@@ -219,13 +239,17 @@ h3.section-title {
   }
 
   .section-title {
-    font-family: $custom-font-family;
+    //font-family: $custom-font-family;
     font-weight: normal;
     font-size: 2rem;
     line-height: 1;
     margin-bottom: 3rem;
     text-align: center;
     &:first-letter {font-family: 'Aston Script';}
+    @media screen and (min-width: 769px) {
+      font-size: 3.6rem;
+      br {display: none;}
+    }
   }
 
   .plans-nav {
@@ -233,6 +257,12 @@ h3.section-title {
     justify-content: space-between;
     margin-bottom: 2.5rem;
     padding: 5px 0;
+    @media screen and (min-width: 1024px) {
+      max-width: 33rem;
+      margin-bottom: 5.5rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
     &.fixed {
       background: #fff;
       box-shadow: 0 0 20px -5px rgba(0,0,0,.3);
@@ -254,11 +284,21 @@ h3.section-title {
       text-align: center;
       text-transform: uppercase;
       width: 33%;
-      &.current {
-        background: $grey;
-        color: #fff;
-        font-weight: 300;
+      @media screen and (max-width: 768px) {
+        &.current {
+          background: $grey;
+          color: #fff;
+          font-weight: 300;
+        }
       }
+      @media screen and (min-width: 769px) {
+        &.active {
+          background: $grey;
+          color: #fff;
+          font-weight: 300;
+        }
+      }
+
     }
   }//.plans-nav
 
@@ -268,6 +308,11 @@ h3.section-title {
     justify-content: space-between;
     max-width: 110rem;
     margin: auto;
+    @media screen and (max-width: 768px) {
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+    }
     @media screen and (max-width: 709px) {
       justify-content: center;
     }
@@ -283,12 +328,26 @@ h3.section-title {
       max-width: 33.5rem;
       overflow: hidden;
       padding-top: 1rem;
+      position: relative;
       text-align: center;
-      @media screen and (min-width: 710px) {
+      transition: $default-transition;
+      width: 33.5rem;
+      @media screen and (min-width: 769px) {
+        padding-bottom: 7rem;
         width: 32%;
+        &.active {
+          box-shadow: 0 0 20px -5px rgba(0,0,0,.3);
+          transform: scale(1.005);
+        }
       }
       @media screen and (max-width: 480px) {
         //max-width: 33.5rem;
+      }
+    }
+
+    .plan-image {
+      @media screen and (min-width: 1101px) {
+        min-height: 32rem;
       }
     }
 
@@ -309,7 +368,7 @@ h3.section-title {
     .plan-info {
       //color: rgba($black, .6);
       margin-bottom: 2.5rem;
-      //padding: 0 2.5rem;
+      padding: 0 1.5rem;
     }
 
     .plan-features {
@@ -385,6 +444,12 @@ h3.section-title {
         bottom: 100%;
         height: 6.8rem;
         left: 0;
+        width: 100%;
+      }
+      @media screen and (min-width: 769px) {
+        bottom: 0;
+        left: 0;
+        position: absolute;
         width: 100%;
       }
       @media screen and (min-width: 710px) and (max-width: 1024px) {
@@ -473,16 +538,33 @@ h3.section-title {
   padding-top: 8rem;
 
   .wrapper {
-    @media screen and (max-width: 375px) {
-      padding: 0;
-    }
+    max-width: 1440px;
+    padding: 0;
+    @media screen and (max-width: 375px) { }
   }//.wrapper
 
-  .section-title {margin-bottom: 2.5rem;}
+  .section-title {
+    font-family: $custom-font-family;
+    font-size: 2.8rem;
+    font-weight: normal;
+    margin-bottom: 2.5rem;
+    text-align: center;
+    @media screen and (min-width: 769px) {font-size: 3.6rem;}
+  }
+
 
   .video-wrap {
+    padding-top: 56.25%;
     position: relative;
     text-align: center;
+    width: 100%;
+    iframe, video {
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
 
     .play-button {
       position: absolute;
@@ -501,6 +583,40 @@ h3.section-title {
 .section-text {
   padding: 5rem 0 8rem;
   text-align: center;
+  @media screen and (min-width: 981px) {
+    padding-top: 8.5rem;
+  }
+
+  .wrapper {
+    @media screen and (min-width: 981px) {
+      display: flex;
+      max-width: 1440px;
+      justify-content: flex-end;
+      padding-right: 0;
+    }
+  }
+
+  .left {
+    @media screen and (min-width: 981px) {
+      margin-right: 8%;
+      text-align: left;
+      max-width: 485px;
+      width: 42%;
+    }
+  }
+  .right {
+    width: 50%;
+    @media screen and (max-width: 981px) {
+      display: none;
+    }
+  }
+
+  .section-title {
+    font-size: 2rem;
+    @media screen and (min-width: 769px) {
+      font-size: 3.6rem;
+    }
+  }
 
   p {
     margin-bottom: 1.5rem;
@@ -517,6 +633,8 @@ h3.section-title {
     position: absolute;
     right: 0;
     top: -7rem;
+    max-width: 26rem;
+    @media screen and (max-width: 768px) {width: 21rem;}
   }
 
   .section-title {
@@ -524,6 +642,10 @@ h3.section-title {
     font-size: 2.8rem;
     font-weight: normal;
     margin-bottom: 4.5rem;
+    text-align: center;
+    @media screen and (min-width: 769px) {
+      font-size: 3.6rem;
+    }
   }
 
   .faq-list {
@@ -541,10 +663,14 @@ h3.section-title {
     justify-content: space-between;
     font-size: 1.8rem;
     font-weight: normal;
+    @media screen and (min-width: 769px) {
+      font-size: 2.4rem;
+    }
   }//.faq-question
 
   .icon-faq {
     cursor: pointer;
+    font-size: 1.8rem;
     flex-shrink: 0;
     height: 2rem;
     margin-left: 2rem;
@@ -616,9 +742,10 @@ h3.section-title {
   .wrapper {
     align-items: center;
     display: flex;
-    justify-content: center;
-    @media screen and (max-width: 768px) {
-      justify-content: space-around;
+    justify-content: space-around;
+    @media screen and (min-width: 769px) {
+      justify-content: center;
+      a {margin: 0 3rem;}
     }
   }
 

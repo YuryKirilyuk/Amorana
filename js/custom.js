@@ -62,8 +62,12 @@ $(function(){
 
     $('.plans-nav a[href^="#"]').click(function(){
         var target = $(this).attr('href');
-        $('html, body').animate({scrollTop: $(target).offset().top-45}, 500);
-
+        if($(window).width() <= '768') {
+            $('html, body').animate({scrollTop: $(target).offset().top-45}, 500);
+        }
+        $(this).addClass('active').siblings().removeClass('active');
+        $('.plans-list').children().removeClass('active');
+        $('.plans-list').find(target).addClass('active');
         return false;
     });
 
