@@ -1,3 +1,48 @@
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.animated.infinite {
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
 main.content {overflow: hidden;}
 
 section {position: relative;}
@@ -21,10 +66,36 @@ h3.section-title {
 
 
 .section-hero {
-  background: url(../img/pine.png) no-repeat right -100px top;
-  padding-top: 7.5rem;
+  padding-top: 8.5rem;
+
+  &:before {
+    background: url(../img/pine.png) no-repeat right -100px top;
+    content: '';
+    height: 318px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 567px;
+
+    @media screen and (max-width: 1024px) {
+      background-position: right -25px top;
+      background-size: 328px 184px;
+    }
+  }
+
+  &:after {
+    content: '';
+    background: linear-gradient(360deg, #C4C4C4 0%, rgba(196, 196, 196, 0) 32.98%);
+    height: 100%;
+    opacity: 0.1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
   @media screen and (max-width: 1024px) {
-    padding-top: 10rem;
+    padding-top: 10.3rem;
     background-position: right -25px top;
     background-size: 328px 184px;
     text-align: center;
@@ -34,19 +105,26 @@ h3.section-title {
     @media screen and (min-width: 1025px) {
       display: flex;
       justify-content: space-between;
-      max-width: 1150px;
+      max-width: 1190px;
+      position: relative;
+      z-index: 1;
     }
   }
 
   .hero-left {
+    margin-left: -10px;
     width: 100%;
     max-width: 450px;
     text-align: center;
     @media screen and (max-width: 1024px) {margin: auto;}
   }
 
+  .hero-right {
+    margin-bottom: -5.5rem;
+  }
+
   .logo {
-    margin-bottom: 2.5rem;
+    margin-bottom: .8rem;
     @media screen and (min-width: 1025px) {margin-bottom: 4rem;}
     img {
       @media screen and (min-width: 1025px) {width: 36rem;}
@@ -70,8 +148,12 @@ h3.section-title {
     .date {
       flex-shrink: 0;
       margin-right: 1rem;
-      img {width: 100%;}
+      img {
+        display: block;
+        width: 100%;
+      }
       @media screen and (min-width: 1025px) {
+        margin-left: -20px;
         width: 213px;
       }
     }
@@ -80,7 +162,7 @@ h3.section-title {
 
 
   .btn {
-    margin: 4.5rem auto 4rem;
+    margin: 5.5rem auto 4rem;
     @media screen and (max-width: 1024px) {
       display: none;
       max-width: 100%;
@@ -135,28 +217,30 @@ h3.section-title {
 
 
 .section-features {
-  padding: 6.5rem 0 2.5rem;
+  padding: 11rem 0 2.5rem;
   text-align: center;
 
   .image-wrap {
-    left: -25px;
+    left: -10px;
     position: absolute;
-    top: 12rem;
-    transform: rotateZ(196deg);
-    width: 160px;
+    top: 13rem;
+    width: 150px;
     @media screen and (min-width: 1024px) {
-      left: -45px;
-      top: 0;
-      width: 317px;
+      left: 0;
+      top: -55px;
+      width: 310px;
     }
   }
 
   .section-title {
     font-size: 2rem;
-    font-weight: 300;
+    font-weight: 400;
     line-height: 1.25;
-    margin: 0 auto 7.8rem;
-    @media screen and (min-width: 768px) {font-size: 3.6rem;}
+    margin: 0 auto 6.8rem;
+    @media screen and (min-width: 768px) {
+      font-size: 3.6rem;
+      font-weight: 300;
+    }
     @media screen and (max-width: 768px) {margin-bottom: 1.8rem;}
   }
 
@@ -172,6 +256,16 @@ h3.section-title {
       max-width: 19.5rem;
       padding-bottom: 1rem;
       padding-top: 2.3rem;
+
+      &:first-child {
+        background: none;
+        padding-top: 0;
+
+        @media screen and (min-width: 881px) {
+          background: url(../img/plants.svg) no-repeat center top;
+          padding-top: 2.3rem;
+        }
+      }
     }//.feature
   }//.features-list
 
@@ -180,8 +274,15 @@ h3.section-title {
 
 
 .section-plans {
-  padding: 6rem 0 7rem;
-  @media screen and (min-width: 1025px) {padding-top: 10rem;}
+  padding: 6rem 0 8rem;
+  @media screen and (min-width: 1025px) {
+    padding: 10rem 0;
+  }
+
+  .wrapper {
+    max-width: 1196px;
+    padding: 0 1.3rem;
+  }
 
   .image-wrap {
     position: absolute;
@@ -199,6 +300,7 @@ h3.section-title {
     &:first-letter {font-family: 'Aston Script', serif;}
     @media screen and (min-width: 769px) {
       font-size: 3.6rem;
+      margin-bottom: 2.5rem;
       br {display: none;}
     }
   }
@@ -256,7 +358,6 @@ h3.section-title {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    max-width: 110rem;
     margin: auto;
     @media screen and (max-width: 768px) {
       align-items: center;
@@ -270,13 +371,22 @@ h3.section-title {
       font-weight: 300;
       line-height: 1.46;
       margin-bottom: 4rem;
-      max-width: 33.5rem;
+      max-width: 34.5rem;
       overflow: hidden;
       padding-top: 1rem;
       position: relative;
       text-align: center;
       transition: $default-transition;
-      width: 33.5rem;
+      width: 34.5rem;
+
+      &:last-child {
+        margin-bottom: 0;
+
+        @media screen and (min-width: 769px) {
+          margin-bottom: 4rem;
+        }
+      }
+
       @media screen and (min-width: 769px) {
         padding-bottom: 7rem;
         width: 32%;
@@ -294,8 +404,13 @@ h3.section-title {
     }
 
     .plan-info {
-      margin-bottom: 2.5rem;
+      margin-top: .8rem;
+      margin-bottom: 2rem;
       padding: 0 1.5rem;
+
+      @media screen and (min-width: 769px) {
+        margin-top: -.7rem;
+      }
     }
 
     .plan-features {
@@ -304,10 +419,11 @@ h3.section-title {
       ul {
         list-style: none;
         padding-left: 1.2rem;
+        padding-right: 1rem;
         text-align: left;
 
         li {
-          padding: 4px 0 4px 2rem;
+          padding: 8px 0 8px 2rem;
           position: relative;
           &:before {
             background: $black;
@@ -316,7 +432,7 @@ h3.section-title {
             height: 1rem;
             left: 0;
             position: absolute;
-            top: 1rem;
+            top: 1.4rem;
             width: 1rem;
           }
         }
@@ -357,6 +473,9 @@ h3.section-title {
     .btn {
       color: #fff !important;
       font-size: 2.7rem;
+      letter-spacing: -0.04em;
+      height: 5.7rem;
+      line-height: 5.7rem;
       margin-bottom: 0;
       margin-top: 1.7rem;
       max-width: 100%;
@@ -420,7 +539,7 @@ h3.section-title {
   .wrapper {max-width: 60rem;}
 
   .swiper-container {
-    padding-bottom: 4rem;
+    padding-bottom: 5.5rem;
 
     .swiper-pagination {bottom: 0;}
 
@@ -439,8 +558,8 @@ h3.section-title {
     font-family: 'Palatino', serif;
     font-size: 15px;
     font-style: italic;
-    line-height: 1.56;
-    margin-bottom: 3.5rem;
+    line-height: 2.5rem;
+    margin-bottom: 3rem;
   }
 
   .name {
@@ -452,7 +571,7 @@ h3.section-title {
 
 
 .section-video {
-  padding-top: 8rem;
+  padding-top: 7rem;
 
   .wrapper {
     max-width: 1440px;
@@ -461,10 +580,9 @@ h3.section-title {
   }
 
   .section-title {
-    font-family: $custom-font-family;
     font-size: 2.8rem;
     font-weight: normal;
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
     text-align: center;
     @media screen and (min-width: 769px) {font-size: 3.6rem;}
   }
@@ -490,16 +608,19 @@ h3.section-title {
 
 
 .section-text {
-  padding: 5rem 0 8rem;
+  padding: 4rem 0 9rem;
   text-align: center;
-  @media screen and (min-width: 981px) {padding-top: 8.5rem;}
+  @media screen and (min-width: 981px) {
+    padding-top: 15rem;
+    padding-bottom: 13rem;
+  }
 
   .wrapper {
     @media screen and (min-width: 981px) {
       display: flex;
       max-width: 1440px;
       justify-content: flex-end;
-      padding-right: 0;
+      padding: 0;
     }
   }
 
@@ -508,6 +629,7 @@ h3.section-title {
       margin-right: 8%;
       text-align: left;
       max-width: 485px;
+      padding-top: 3.5rem;
       width: 42%;
     }
   }
@@ -518,10 +640,19 @@ h3.section-title {
 
   .section-title {
     font-size: 2rem;
-    @media screen and (min-width: 769px) {font-size: 3.6rem;}
+    margin-bottom: 2rem;
+    @media screen and (min-width: 769px) {
+      font-size: 3.6rem;
+      font-weight: 300;
+    }
   }
 
-  p {margin-bottom: 1.5rem;}
+  p {
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 22px;
+  }
 
 }//.section-text
 
@@ -530,28 +661,54 @@ h3.section-title {
 .section-faq {
   padding: 5.5rem 0 0;
 
+  .wrapper {
+    max-width: 1210px;
+  }
+
   .image-wrap {
     position: absolute;
     right: 0;
-    top: -7rem;
-    max-width: 26rem;
-    @media screen and (max-width: 980px) {max-width: 21rem;}
+    top: -32rem;
+    max-width: 45rem;
+    @media screen and (max-width: 980px) {
+      max-width: 21rem;
+      top: -8rem;
+    }
   }
 
   .section-title {
     font-size: 2.8rem;
     font-weight: normal;
-    margin-bottom: 4.5rem;
+    margin-bottom: 2.5rem;
     text-align: center;
-    @media screen and (min-width: 769px) {font-size: 3.6rem;}
+    @media screen and (min-width: 769px) {
+      font-size: 3.6rem;
+      font-weight: 300;
+      margin-bottom: 5rem;
+    }
   }
 
   .faq-list {
     list-style: none;
     margin: 0 -2rem;
+
+    @media screen and (min-width: 769px) {
+      margin: 0;
+    }
+
     li {
       border-bottom: 1px solid rgba(0,0,0,.2);
       padding: 1.8rem 2rem;
+
+      @media screen and (min-width: 769px) {
+        padding: 3.5rem 0;
+      }
+
+      &:last-child {
+        @media screen and (min-width: 769px) {
+          border-bottom: none;
+        }
+      }
     }
   }//.faq-list
 
@@ -575,6 +732,11 @@ h3.section-title {
     width: 2rem;
     &.show {transform: rotateZ(0deg);}
 
+    @media screen and (min-width: 769px) {
+      height: 3rem;
+      width: 3rem;
+    }
+
     svg {
       fill: #000;
       height: 100%;
@@ -584,9 +746,20 @@ h3.section-title {
 
   .faq-answer {
     display: none;
-    padding-top: 1.7rem;
+    padding-top: 2.7rem;
 
-    p {padding-bottom: 2rem;}
+    p {
+      font: {
+        size: 15px;
+        weight: 300;
+      }
+      line-height: 22px;
+      padding-bottom: 2rem;
+
+      @media screen and (min-width: 769px) {
+        padding-bottom: 1rem;
+      }
+    }
 
   }//.faq-answer
 
@@ -600,6 +773,10 @@ h3.section-title {
   font-size: 1.1rem;
   font-weight: normal;
   line-height: 1.33;
+
+  @media screen and (min-width: 769px) {
+    display: none;
+  }
 
   .quote {
     background: url(../img/bg/bg_testimonial.png) no-repeat right 2rem;
@@ -636,7 +813,7 @@ h3.section-title {
 
 .section-socials {
   background: $grey;
-  padding: 2rem 0;
+  padding: 2.5rem 0;
 
   .wrapper {
     align-items: center;

@@ -272,7 +272,7 @@
 
 .section-testimonials {
     background-image: none;
-    padding: 60px 0;
+    padding: 45px 0 85px;
 }
 
     .section-testimonials .quote-pic {display: none;}
@@ -336,7 +336,7 @@
                 }
 
         .section-testimonials .swiper-pagination {
-            bottom: -50px;
+            bottom: -45px;
             width: 100%;
         }
 

@@ -6,4 +6,16 @@
   line-height: 1.8;
   padding: 1.5rem 0;
   text-align: center;
+
+  .wrapper {
+    @media screen and (min-width: 769px) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      p + p {
+        margin-left: 5px;
+      }
+    }
+  }
 }

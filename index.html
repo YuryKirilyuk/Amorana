@@ -49,7 +49,7 @@
                         <img alt="" src="img/hero_image.png" />
                     </div>
 
-                    <div class="hero-swiper-container">
+                    <div class="hero-swiper-container fadeInUp animated">
 
                         <div class="swiper-wrapper">
 
@@ -86,7 +86,7 @@
         <section class="section-features">
 
             <div class="image-wrap">
-                <img src="img/img6.png" alt="Image" />
+                <img src="img/img6-d.png" alt="Image" />
             </div>
 
             <div class="wrapper">
@@ -344,7 +344,10 @@
             <div class="wrapper">
                 <h3 class="section-title">Kalender Unboxing</h3>
                 <div class="video-wrap">
-                    <iframe src="https://www.youtube.com/embed/bAdqazixuRY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <video autoplay="autoplay" loop class="js-video" muted>
+                        <source src="img/video.mp4">
+                    </video>
+                    <div id="player" style="display: none;"></div>
                 </div>
             </div>
         </section><!-- //.section-video -->
@@ -358,7 +361,7 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ipsum platea mauris maecenas pellentesque magna. In neque, diam tellus non iaculis nullam dui. Mattis vel mauris adipiscing vestibulum nec ut metus, amet etiam. In sagittis nunc, enim dolor justo, porttitor tincidunt scelerisque. Rhoncus at bibendum sed pharetra. Consectetur purus sit neque quis feugiat aliquet orci risus fusce. Consequat sed eu ipsum, nam bibendum orci neque urna magnis. Laoreet.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ipsum platea mauris maecenas pellentesque magna. In neque, diam tellus non iaculis nullam dui. Mattis vel mauris adipiscing vestibulum nec ut metus, amet etiam. In sagittis nunc, enim dolor justo, porttitor tincidunt scelerisque. Rhoncus at bibendum sed pharetra. </p>
                 </div>
                 <div class="right">
-                    <img alt="" src="img/blank.png" />
+                    <img alt="" src="img/adv-pic.jpg" />
                 </div>
             </div>
         </section><!-- //.section-text -->
@@ -471,6 +474,48 @@
 	
 	<script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/components/swiper.min.js" ></script>
+
+    <script>
+        var tag = document.createElement('script');
+
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        var player, iframe;
+        var $d = document.querySelector.bind(document);
+
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+                videoId: 'Uzd6eKvC9mk',
+                events: {
+                    'onReady': onPlayerReady
+                }
+            });
+        }
+
+        function onPlayerReady(event) {
+            player = event.target;
+            iframe = $d('#player');
+            setupListener();
+        }
+
+        function setupListener (){
+            $d('.js-video').addEventListener('click', playFullscreen);
+        }
+
+        function playFullscreen (){
+            player.playVideo();//won't work on mobile
+
+            iframe.style.display = 'block';
+
+            var requestFullScreen = iframe.requestFullScreen || iframe.mozRequestFullScreen || iframe.webkitRequestFullScreen;
+            if (requestFullScreen) {
+                requestFullScreen.bind(iframe)();
+            }
+        }
+    </script>
+
 	<script src="js/custom.js" ></script>
 	<script src="js/custom-alex.js" ></script>
 
