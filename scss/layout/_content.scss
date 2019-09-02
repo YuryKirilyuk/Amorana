@@ -30,8 +30,10 @@ h3.section-title {
     height: 318px;
     position: absolute;
     top: 0;
+    //transition: all .5s;
     right: 0;
     width: 567px;
+    animation: slideIn 1.2s ease-in-out;
 
     @media screen and (max-width: 1024px) {
       background-position: right -25px top;
@@ -474,27 +476,25 @@ h3.section-title {
       .btn {
         background: $red;
         &:before {background: linear-gradient(360deg, $red -276.32%, rgba(252, 45, 77, 0) 100%);}
+        &:hover {background: darken($red, 10%);}
       }
     }//.classic-plan
 
     .premium-plan {
       @media screen and (min-width: 769px) {
-        &.active {
-          box-shadow: 0 0 20px -5px rgba($golden, .7);
-        }
+        &.active {box-shadow: 0 0 20px -5px rgba($golden, .7);}
       }
       ul li:before {background: $golden;}
       .btn {
         background: $golden;
         &:before {background: linear-gradient(360deg, $golden -276.32%, rgba(253, 185, 123, 0) 100%);}
+        &:hover {background: darken($golden, 10%);}
       }
     }//.premium-plan
 
     .deluxe-plan {
       @media screen and (min-width: 769px) {
-        &.active {
-          box-shadow: 0 0 20px -5px rgba($black, .3);
-        }
+        &.active {box-shadow: 0 0 20px -5px rgba($black, .3);}
       }
       ul li:before {background: $black;}
       .btn {
@@ -503,6 +503,7 @@ h3.section-title {
           background: linear-gradient(360deg, $black -276.32%, rgba(0, 0, 0, 0) 100%);
           opacity: .5;
         }
+        &:hover {background: lighten($black, 15%);}
       }
     }//.deluxe-plan
 

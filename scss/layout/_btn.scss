@@ -11,8 +11,11 @@
   min-width: 28rem;
   text-transform: uppercase;
   text-align: center;
+  transition: $default-transition !important;
   &:hover {
-    background: darken($red, 5%);
+    background: darken($red, 10%);
+    box-shadow: 0 0 20px -5px rgba(0,0,0,.5);
+    //transform: scale(1.05) !important;
   }
   @media screen and (max-width: 480px) {
     width: 100%;
