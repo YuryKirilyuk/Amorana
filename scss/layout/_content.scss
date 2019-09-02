@@ -19,6 +19,7 @@ h3.section-title {
 
 .section-hero {
   padding-top: 8.5rem;
+  z-index: 1;
 
   &:before {
     background: url(../img/pine.png) no-repeat right -100px top;
@@ -26,8 +27,10 @@ h3.section-title {
     height: 318px;
     position: absolute;
     top: 0;
+    //transition: all .5s;
     right: 0;
     width: 567px;
+    animation: slideIn 1.2s ease-in-out;
 
     @media screen and (max-width: 1024px) {
       background-position: right -25px top;
@@ -298,12 +301,12 @@ h3.section-title {
 }//.section-gallery
 
 
-
 .section-plans {
   padding: 6rem 0 8rem;
   @media screen and (min-width: 1025px) {
     padding: 10rem 0;
   }
+  &.no-transform {transform: none !important;} //'transform + fixed' issue fix
 
   .wrapper {
     max-width: 1196px;
@@ -338,7 +341,7 @@ h3.section-title {
     margin-bottom: 2.5rem;
     padding: 5px 0;
     @media screen and (min-width: 1024px) {
-      max-width: 33rem;
+      //max-width: 33rem;
       margin-bottom: 5.5rem;
       margin-left: auto;
       margin-right: auto;
@@ -365,17 +368,22 @@ h3.section-title {
       width: 33%;
       @media screen and (max-width: 768px) {
         &.current {
-          background: $grey;
           color: #fff;
           font-weight: 300;
         }
+        &[href*="classic"].current {background: $red;}
+        &[href*="premium"].current {background: $golden;}
+        &[href*="deluxe"].current {background: $black;}
       }
       @media screen and (min-width: 769px) {
-        &.active {
-          background: $grey;
-          color: #fff;
-          font-weight: 300;
-        }
+        color: #fff;
+        font-weight: 300;
+        max-width: 34.2rem;
+        width: 32%;
+
+        &[href*="classic"] {background: $red;}
+        &[href*="premium"] {background: $golden;}
+        &[href*="deluxe"] {background: $black;}
       }
 
     }
@@ -439,10 +447,6 @@ h3.section-title {
       @media screen and (min-width: 769px) {
         padding-bottom: 7rem;
         width: 32%;
-        &.active {
-          box-shadow: 0 0 20px -5px rgba(0,0,0,.3);
-          //transform: scale(1.005);
-        }
       }
     }
 
@@ -557,20 +561,33 @@ h3.section-title {
 
 
     .classic-plan {
+      @media screen and (min-width: 769px) {
+        &.active {box-shadow: 0 0 20px -5px rgba($red, .3);}
+      }
       ul li:before {background: $red;}
       .btn {
         background: $red;
         &:before {background: linear-gradient(360deg, $red -276.32%, rgba(252, 45, 77, 0) 100%);}
+        &:hover {background: darken($red, 10%);}
       }
     }//.classic-plan
+
     .premium-plan {
+      @media screen and (min-width: 769px) {
+        &.active {box-shadow: 0 0 20px -5px rgba($golden, .7);}
+      }
       ul li:before {background: $golden;}
       .btn {
         background: $golden;
         &:before {background: linear-gradient(360deg, $golden -276.32%, rgba(253, 185, 123, 0) 100%);}
+        &:hover {background: darken($golden, 10%);}
       }
     }//.premium-plan
+
     .deluxe-plan {
+      @media screen and (min-width: 769px) {
+        &.active {box-shadow: 0 0 20px -5px rgba($black, .3);}
+      }
       ul li:before {background: $black;}
       .btn {
         background: $black;
@@ -578,6 +595,7 @@ h3.section-title {
           background: linear-gradient(360deg, $black -276.32%, rgba(0, 0, 0, 0) 100%);
           opacity: .5;
         }
+        &:hover {background: lighten($black, 15%);}
       }
     }//.deluxe-plan
 
@@ -792,6 +810,7 @@ h3.section-title {
 
   .faq-question {
     align-items: center;
+    cursor: pointer;
     display: flex;
     justify-content: space-between;
     font-size: 1.8rem;

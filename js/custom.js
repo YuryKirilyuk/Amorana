@@ -12,6 +12,10 @@ if ($('.section-plans').length > 0) {
     var classicPlanOffset = classicPlan.offset(),
         premiumPlanOffset = premiumPlan.offset(),
         deluxePlanOffset = deluxePlan.offset();
+
+    console.log('navOffsetTop = ' + navOffsetTop);
+    console.log('windowScrollTop = ' + windowScrollTop);
+
 }
 
 
@@ -62,11 +66,11 @@ $(function(){
     $('.plans-nav a[href^="#"]').click(function(){
         var target = $(this).attr('href');
         if($(window).width() <= '768') {
-            $('html, body').animate({scrollTop: $(target).offset().top-45}, 500);
+            $('html, body').animate({scrollTop: $(target).offset().top-65}, 500);
         }
-        $(this).addClass('active').siblings().removeClass('active');
-        $('.plans-list').children().removeClass('active');
-        $('.plans-list').find(target).addClass('active');
+        //$(this).addClass('active').siblings().removeClass('active');
+        //$('.plans-list').children().removeClass('active');
+        //$('.plans-list').find(target).addClass('active');
         return false;
     });
 
@@ -101,10 +105,16 @@ $(function(){
 });
 
 function setPlanNavState(){
-    (windowScrollTop >= navOffsetTop) && (windowScrollTop < (navOffsetTop + plansListHeight + 55)) ? plansNav.addClass('fixed') : plansNav.removeClass('fixed');
+    if((windowScrollTop >= navOffsetTop -100 ) && (windowScrollTop < (navOffsetTop + plansListHeight + 55))) {
+        $('.section-plans').addClass('no-transform'); //'transform + fixed' issue fix
+        plansNav.addClass('fixed');
+    } else {
+        plansNav.removeClass('fixed');
+        $('.section-plans').removeClass('no-transform');
+    }
 }
 function setMenuItemState(){
-    if(windowScrollTop >= classicPlanOffset.top - 55) plansNav.find('a[href*="classic-plan"]').addClass('current').siblings().removeClass('current');
-    if(windowScrollTop >= premiumPlanOffset.top - 55) plansNav.find('a[href*="premium-plan"]').addClass('current').siblings().removeClass('current');
-    if(windowScrollTop >= deluxePlanOffset.top - 55) plansNav.find('a[href*="deluxe-plan"]').addClass('current').siblings().removeClass('current');
+    if(windowScrollTop >= classicPlanOffset.top - 180) plansNav.find('a[href*="classic-plan"]').addClass('current').siblings().removeClass('current');
+    if(windowScrollTop >= premiumPlanOffset.top - 180) plansNav.find('a[href*="premium-plan"]').addClass('current').siblings().removeClass('current');
+    if(windowScrollTop >= deluxePlanOffset.top - 180) plansNav.find('a[href*="deluxe-plan"]').addClass('current').siblings().removeClass('current');
 }

@@ -771,6 +771,27 @@ img {
   display: table;
   clear: both; }
 
+@-webkit-keyframes slideIn {
+  0% {
+    right: -300px;
+    top: -200px; }
+  100% {
+    right: 0;
+    top: 0; } }
+@-moz-keyframes slideIn {
+  0% {
+    right: -300px;
+    top: -200px; }
+  100% {
+    right: 0;
+    top: 0; } }
+@keyframes slideIn {
+  0% {
+    right: -300px;
+    top: -200px; }
+  100% {
+    right: 0;
+    top: 0; } }
 .site-footer {
   background: #000;
   color: #ccc;
@@ -781,11 +802,10 @@ img {
   text-align: center; }
   @media screen and (min-width: 769px) {
     .site-footer .wrapper {
-      display: flex;
       align-items: center;
-      justify-content: center; }
-      .site-footer .wrapper p + p {
-        margin-left: 5px; } }
+      display: flex;
+      flex-direction: column;
+      justify-content: center; } }
 
 main.content {
   overflow: hidden; }
@@ -811,7 +831,8 @@ h3.section-title {
   position: relative; }
 
 .section-hero {
-  padding-top: 8.5rem; }
+  padding-top: 8.5rem;
+  z-index: 1; }
   .section-hero:before {
     background: url(../img/pine.png) no-repeat right -100px top;
     content: '';
@@ -819,7 +840,8 @@ h3.section-title {
     position: absolute;
     top: 0;
     right: 0;
-    width: 567px; }
+    width: 567px;
+    animation: slideIn 1.2s ease-in-out; }
     @media screen and (max-width: 1024px) {
       .section-hero:before {
         background-position: right -25px top;
@@ -1031,6 +1053,8 @@ h3.section-title {
   @media screen and (min-width: 1025px) {
     .section-plans {
       padding: 10rem 0; } }
+  .section-plans.no-transform {
+    transform: none !important; }
   .section-plans .wrapper {
     max-width: 1196px;
     padding: 0 1.3rem; }
@@ -1063,7 +1087,6 @@ h3.section-title {
     padding: 5px 0; }
     @media screen and (min-width: 1024px) {
       .section-plans .plans-nav {
-        max-width: 33rem;
         margin-bottom: 5.5rem;
         margin-left: auto;
         margin-right: auto; } }
@@ -1088,14 +1111,26 @@ h3.section-title {
       width: 33%; }
       @media screen and (max-width: 768px) {
         .section-plans .plans-nav a.current {
-          background: #A8A8A8;
           color: #fff;
-          font-weight: 300; } }
+          font-weight: 300; }
+        .section-plans .plans-nav a[href*="classic"].current {
+          background: #FC2D4D; }
+        .section-plans .plans-nav a[href*="premium"].current {
+          background: #FDB97B; }
+        .section-plans .plans-nav a[href*="deluxe"].current {
+          background: #000; } }
       @media screen and (min-width: 769px) {
-        .section-plans .plans-nav a.active {
-          background: #A8A8A8;
+        .section-plans .plans-nav a {
           color: #fff;
-          font-weight: 300; } }
+          font-weight: 300;
+          max-width: 34.2rem;
+          width: 32%; }
+          .section-plans .plans-nav a[href*="classic"] {
+            background: #FC2D4D; }
+          .section-plans .plans-nav a[href*="premium"] {
+            background: #FDB97B; }
+          .section-plans .plans-nav a[href*="deluxe"] {
+            background: #000; } }
   .section-plans .plans-list {
     display: flex;
     flex-wrap: wrap;
@@ -1141,9 +1176,7 @@ h3.section-title {
       @media screen and (min-width: 769px) {
         .section-plans .plans-list > div {
           padding-bottom: 7rem;
-          width: 32%; }
-          .section-plans .plans-list > div.active {
-            box-shadow: 0 0 20px -5px rgba(0, 0, 0, 0.3); } }
+          width: 32%; } }
     @media screen and (min-width: 769px) {
       .section-plans .plans-list h3.section-title {
         font-size: 2.6rem;
@@ -1229,18 +1262,31 @@ h3.section-title {
       @media screen and (min-width: 710px) and (max-width: 1024px) {
         .section-plans .plans-list .btn {
           font-size: 2rem; } }
+    @media screen and (min-width: 769px) {
+      .section-plans .plans-list .classic-plan.active {
+        box-shadow: 0 0 20px -5px rgba(252, 45, 77, 0.3); } }
     .section-plans .plans-list .classic-plan ul li:before {
       background: #FC2D4D; }
     .section-plans .plans-list .classic-plan .btn {
       background: #FC2D4D; }
       .section-plans .plans-list .classic-plan .btn:before {
         background: linear-gradient(360deg, #FC2D4D -276.32%, rgba(252, 45, 77, 0) 100%); }
+      .section-plans .plans-list .classic-plan .btn:hover {
+        background: #f30328; }
+    @media screen and (min-width: 769px) {
+      .section-plans .plans-list .premium-plan.active {
+        box-shadow: 0 0 20px -5px rgba(253, 185, 123, 0.7); } }
     .section-plans .plans-list .premium-plan ul li:before {
       background: #FDB97B; }
     .section-plans .plans-list .premium-plan .btn {
       background: #FDB97B; }
       .section-plans .plans-list .premium-plan .btn:before {
         background: linear-gradient(360deg, #FDB97B -276.32%, rgba(253, 185, 123, 0) 100%); }
+      .section-plans .plans-list .premium-plan .btn:hover {
+        background: #fc9e49; }
+    @media screen and (min-width: 769px) {
+      .section-plans .plans-list .deluxe-plan.active {
+        box-shadow: 0 0 20px -5px rgba(0, 0, 0, 0.3); } }
     .section-plans .plans-list .deluxe-plan ul li:before {
       background: #000; }
     .section-plans .plans-list .deluxe-plan .btn {
@@ -1248,6 +1294,8 @@ h3.section-title {
       .section-plans .plans-list .deluxe-plan .btn:before {
         background: linear-gradient(360deg, #000 -276.32%, rgba(0, 0, 0, 0) 100%);
         opacity: .5; }
+      .section-plans .plans-list .deluxe-plan .btn:hover {
+        background: #262626; }
 
 .section-testimonials {
   background: #F6F6F6 url(../img/img_quote.png) no-repeat center 45px;
@@ -1398,6 +1446,7 @@ h3.section-title {
           border-bottom: none; } }
   .section-faq .faq-question {
     align-items: center;
+    cursor: pointer;
     display: flex;
     justify-content: space-between;
     font-size: 1.8rem;
@@ -1516,9 +1565,11 @@ h3.section-title {
   max-width: 28rem;
   min-width: 28rem;
   text-transform: uppercase;
-  text-align: center; }
+  text-align: center;
+  transition: all 0.3s linear !important; }
   .btn:hover {
-    background: #fc1438; }
+    background: #f30328;
+    box-shadow: 0 0 20px -5px rgba(0, 0, 0, 0.5); }
   @media screen and (max-width: 480px) {
     .btn {
       width: 100%; } }
