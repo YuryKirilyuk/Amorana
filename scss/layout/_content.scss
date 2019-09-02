@@ -228,12 +228,12 @@ h3.section-title {
 }//.section-gallery
 
 
-
 .section-plans {
   padding: 6rem 0 8rem;
   @media screen and (min-width: 1025px) {
     padding: 10rem 0;
   }
+  &.no-transform {transform: none !important;} //'transform + fixed' issue fix
 
   .wrapper {
     max-width: 1196px;
@@ -295,17 +295,21 @@ h3.section-title {
       width: 33%;
       @media screen and (max-width: 768px) {
         &.current {
-          background: $grey;
           color: #fff;
           font-weight: 300;
         }
+        &[href*="classic"].current {background: $red;}
+        &[href*="premium"].current {background: $golden;}
+        &[href*="deluxe"].current {background: $black;}
       }
       @media screen and (min-width: 769px) {
         &.active {
-          background: $grey;
           color: #fff;
           font-weight: 300;
         }
+        &[href*="classic"].active {background: $red;}
+        &[href*="premium"].active {background: $golden;}
+        &[href*="deluxe"].active {background: $black;}
       }
 
     }
@@ -349,6 +353,7 @@ h3.section-title {
         width: 32%;
         &.active {
           box-shadow: 0 0 20px -5px rgba(0,0,0,.3);
+
           //transform: scale(1.005);
         }
       }
@@ -465,20 +470,25 @@ h3.section-title {
 
 
     .classic-plan {
+      &.active {box-shadow: 0 0 20px -5px rgba($red, .3);}
       ul li:before {background: $red;}
       .btn {
         background: $red;
         &:before {background: linear-gradient(360deg, $red -276.32%, rgba(252, 45, 77, 0) 100%);}
       }
     }//.classic-plan
+
     .premium-plan {
+      &.active {box-shadow: 0 0 20px -5px rgba($golden, .7);}
       ul li:before {background: $golden;}
       .btn {
         background: $golden;
         &:before {background: linear-gradient(360deg, $golden -276.32%, rgba(253, 185, 123, 0) 100%);}
       }
     }//.premium-plan
+
     .deluxe-plan {
+      &.active {box-shadow: 0 0 20px -5px rgba($black, .3);}
       ul li:before {background: $black;}
       .btn {
         background: $black;
