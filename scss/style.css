@@ -1148,14 +1148,16 @@ h3.section-title {
       font-size: 1.5rem;
       font-weight: 300;
       line-height: 1.46;
-      margin-bottom: 4rem;
+      padding-top: 6rem;
       max-width: 34.5rem;
       /*overflow: hidden;*/
-      padding-top: 1rem;
       position: relative;
       text-align: center;
       transition: all 0.3s linear;
       width: 34.5rem; }
+      @media screen and (min-width: 769px) {
+        .section-plans .plans-list > div {
+          padding-top: 0; } }
       .section-plans .plans-list > div[data-aos^=fade][data-aos^=fade] {
         position: relative;
         bottom: -100px;
@@ -1174,11 +1176,11 @@ h3.section-title {
       @media screen and (min-width: 769px) {
         .section-plans .plans-list > div[data-aos][data-aos-delay="800"] *[data-aos] {
           transition-delay: .8s; } }
-      .section-plans .plans-list > div:last-child {
-        margin-bottom: 0; }
-        @media screen and (min-width: 769px) {
-          .section-plans .plans-list > div:last-child {
-            margin-bottom: 4rem; } }
+      .section-plans .plans-list > div:first-child {
+        padding-top: 0; }
+      @media screen and (min-width: 769px) {
+        .section-plans .plans-list > div:last-child {
+          margin-bottom: 4rem; } }
       @media screen and (min-width: 769px) {
         .section-plans .plans-list > div {
           padding-bottom: 7rem;

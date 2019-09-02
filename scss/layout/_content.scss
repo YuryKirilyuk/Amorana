@@ -405,14 +405,17 @@ h3.section-title {
       font-size: 1.5rem;
       font-weight: 300;
       line-height: 1.46;
-      margin-bottom: 4rem;
+      padding-top: 6rem;
       max-width: 34.5rem;
       /*overflow: hidden;*/
-      padding-top: 1rem;
       position: relative;
       text-align: center;
       transition: $default-transition;
       width: 34.5rem;
+
+      @media screen and (min-width: 769px) {
+        padding-top: 0;
+      }
 
       &[data-aos^=fade][data-aos^=fade] {
         position: relative;
@@ -446,9 +449,11 @@ h3.section-title {
         }
       }
 
-      &:last-child {
-        margin-bottom: 0;
+      &:first-child {
+        padding-top: 0;
+      }
 
+      &:last-child {
         @media screen and (min-width: 769px) {
           margin-bottom: 4rem;
         }
