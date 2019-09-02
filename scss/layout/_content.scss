@@ -22,6 +22,7 @@ h3.section-title {
 
 .section-hero {
   padding-top: 8.5rem;
+  z-index: 1;
 
   &:before {
     background: url(../img/pine.png) no-repeat right -100px top;
@@ -351,11 +352,6 @@ h3.section-title {
       @media screen and (min-width: 769px) {
         padding-bottom: 7rem;
         width: 32%;
-        &.active {
-          box-shadow: 0 0 20px -5px rgba(0,0,0,.3);
-
-          //transform: scale(1.005);
-        }
       }
     }
 
@@ -470,7 +466,9 @@ h3.section-title {
 
 
     .classic-plan {
-      &.active {box-shadow: 0 0 20px -5px rgba($red, .3);}
+      @media screen and (min-width: 769px) {
+        &.active {box-shadow: 0 0 20px -5px rgba($red, .3);}
+      }
       ul li:before {background: $red;}
       .btn {
         background: $red;
@@ -479,7 +477,11 @@ h3.section-title {
     }//.classic-plan
 
     .premium-plan {
-      &.active {box-shadow: 0 0 20px -5px rgba($golden, .7);}
+      @media screen and (min-width: 769px) {
+        &.active {
+          box-shadow: 0 0 20px -5px rgba($golden, .7);
+        }
+      }
       ul li:before {background: $golden;}
       .btn {
         background: $golden;
@@ -488,7 +490,11 @@ h3.section-title {
     }//.premium-plan
 
     .deluxe-plan {
-      &.active {box-shadow: 0 0 20px -5px rgba($black, .3);}
+      @media screen and (min-width: 769px) {
+        &.active {
+          box-shadow: 0 0 20px -5px rgba($black, .3);
+        }
+      }
       ul li:before {background: $black;}
       .btn {
         background: $black;

@@ -488,7 +488,7 @@ h3.section-title { font-size: 2.4rem; font-weight: normal; margin-bottom: 1.5rem
 
 .wrapper { max-width: 1170px; padding: 0 2rem; margin: 0 auto; position: relative; }
 
-.section-hero { padding-top: 8.5rem; }
+.section-hero { padding-top: 8.5rem; z-index: 1; }
 
 .section-hero:before { background: url(../img/pine.png) no-repeat right -100px top; content: ''; height: 318px; position: absolute; top: 0; right: 0; width: 567px; }
 
@@ -623,8 +623,7 @@ h3.section-title { font-size: 2.4rem; font-weight: normal; margin-bottom: 1.5rem
 
 @media screen and (min-width: 769px) { .section-plans .plans-list > div:last-child { margin-bottom: 4rem; } }
 
-@media screen and (min-width: 769px) { .section-plans .plans-list > div { padding-bottom: 7rem; width: 32%; }
-  .section-plans .plans-list > div.active { box-shadow: 0 0 20px -5px rgba(0, 0, 0, 0.3); } }
+@media screen and (min-width: 769px) { .section-plans .plans-list > div { padding-bottom: 7rem; width: 32%; } }
 
 @media screen and (min-width: 769px) { .section-plans .plans-list h3.section-title { font-size: 2.6rem; margin-top: 1.5rem; } }
 
@@ -660,7 +659,7 @@ h3.section-title { font-size: 2.4rem; font-weight: normal; margin-bottom: 1.5rem
 
 @media screen and (min-width: 710px) and (max-width: 1024px) { .section-plans .plans-list .btn { font-size: 2rem; } }
 
-.section-plans .plans-list .classic-plan.active { box-shadow: 0 0 20px -5px rgba(252, 45, 77, 0.3); }
+@media screen and (min-width: 769px) { .section-plans .plans-list .classic-plan.active { box-shadow: 0 0 20px -5px rgba(252, 45, 77, 0.3); } }
 
 .section-plans .plans-list .classic-plan ul li:before { background: #FC2D4D; }
 
@@ -668,7 +667,7 @@ h3.section-title { font-size: 2.4rem; font-weight: normal; margin-bottom: 1.5rem
 
 .section-plans .plans-list .classic-plan .btn:before { background: linear-gradient(360deg, #FC2D4D -276.32%, rgba(252, 45, 77, 0) 100%); }
 
-.section-plans .plans-list .premium-plan.active { box-shadow: 0 0 20px -5px rgba(253, 185, 123, 0.7); }
+@media screen and (min-width: 769px) { .section-plans .plans-list .premium-plan.active { box-shadow: 0 0 20px -5px rgba(253, 185, 123, 0.7); } }
 
 .section-plans .plans-list .premium-plan ul li:before { background: #FDB97B; }
 
@@ -676,7 +675,7 @@ h3.section-title { font-size: 2.4rem; font-weight: normal; margin-bottom: 1.5rem
 
 .section-plans .plans-list .premium-plan .btn:before { background: linear-gradient(360deg, #FDB97B -276.32%, rgba(253, 185, 123, 0) 100%); }
 
-.section-plans .plans-list .deluxe-plan.active { box-shadow: 0 0 20px -5px rgba(0, 0, 0, 0.3); }
+@media screen and (min-width: 769px) { .section-plans .plans-list .deluxe-plan.active { box-shadow: 0 0 20px -5px rgba(0, 0, 0, 0.3); } }
 
 .section-plans .plans-list .deluxe-plan ul li:before { background: #000; }
 
