@@ -474,8 +474,7 @@ img { height: auto; max-width: 100%; }
 
 .site-footer { background: #000; color: #ccc; font-family: "HelveticaNeueCyr", sans-serif; font-size: 1.2rem; line-height: 1.8; padding: 1.5rem 0; text-align: center; }
 
-@media screen and (min-width: 769px) { .site-footer .wrapper { -webkit-align-items: center; -ms-flex-align: center; align-items: center; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; }
-  .site-footer .wrapper p + p { margin-left: 5px; } }
+@media screen and (min-width: 769px) { .site-footer .wrapper { -webkit-align-items: center; -ms-flex-align: center; align-items: center; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; } }
 
 main.content { overflow: hidden; }
 
