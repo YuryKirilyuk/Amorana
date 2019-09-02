@@ -787,38 +787,6 @@ img {
       .site-footer .wrapper p + p {
         margin-left: 5px; } }
 
-@-webkit-keyframes fadeInUp {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(0, 100%, 0);
-    transform: translate3d(0, 100%, 0); }
-  to {
-    opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0); } }
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(0, 100%, 0);
-    transform: translate3d(0, 100%, 0); }
-  to {
-    opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0); } }
-.fadeInUp {
-  -webkit-animation-name: fadeInUp;
-  animation-name: fadeInUp; }
-
-.animated {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both; }
-
-.animated.infinite {
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite; }
-
 main.content {
   overflow: hidden; }
 
@@ -871,13 +839,14 @@ h3.section-title {
       background-position: right -25px top;
       background-size: 328px 184px;
       text-align: center; } }
-  @media screen and (min-width: 1025px) {
-    .section-hero .wrapper {
-      display: flex;
-      justify-content: space-between;
-      max-width: 1190px;
-      position: relative;
-      z-index: 1; } }
+  .section-hero .wrapper {
+    z-index: 1; }
+    @media screen and (min-width: 1025px) {
+      .section-hero .wrapper {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1190px;
+        position: relative; } }
   .section-hero .hero-left {
     margin-left: -10px;
     width: 100%;
@@ -903,7 +872,7 @@ h3.section-title {
     font-size: 1.7rem;
     line-height: 1.29;
     text-align: left;
-    margin: auto; }
+    margin: 0 auto 5rem; }
     @media screen and (min-width: 1025px) {
       .section-hero .calendar-day {
         font-size: 2.4rem;
@@ -979,7 +948,7 @@ h3.section-title {
         top: -55px;
         width: 310px; } }
   .section-features .section-title {
-    font-size: 2rem;
+    font-size: 2.8rem;
     font-weight: 400;
     line-height: 1.25;
     margin: 0 auto 6.8rem; }
@@ -1028,7 +997,7 @@ h3.section-title {
         max-width: 11rem; } }
   .section-plans .section-title {
     font-weight: normal;
-    font-size: 2rem;
+    font-size: 2.8rem;
     line-height: 1;
     margin-bottom: 3rem;
     text-align: center; }
@@ -1037,6 +1006,7 @@ h3.section-title {
     @media screen and (min-width: 769px) {
       .section-plans .section-title {
         font-size: 3.6rem;
+        font-weight: 300;
         margin-bottom: 2.5rem; }
         .section-plans .section-title br {
           display: none; } }
@@ -1116,6 +1086,10 @@ h3.section-title {
           width: 32%; }
           .section-plans .plans-list > div.active {
             box-shadow: 0 0 20px -5px rgba(0, 0, 0, 0.3); } }
+    @media screen and (min-width: 769px) {
+      .section-plans .plans-list h3.section-title {
+        font-size: 2.6rem;
+        margin-top: 1.5rem; } }
     @media screen and (min-width: 1101px) {
       .section-plans .plans-list .plan-image {
         min-height: 32rem; } }
@@ -1257,7 +1231,8 @@ h3.section-title {
     text-align: center; }
     @media screen and (min-width: 769px) {
       .section-video .section-title {
-        font-size: 3.6rem; } }
+        font-size: 3.6rem;
+        font-weight: 300; } }
   .section-video .video-wrap {
     height: 0;
     padding-top: 56.25%;
@@ -1270,6 +1245,17 @@ h3.section-title {
       position: absolute;
       top: 0;
       width: 100%; }
+    .section-video .video-wrap .play-button {
+      background: url(../img/icons/icon-play.svg) no-repeat center;
+      height: 131px;
+      margin: auto;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 150px;
+      z-index: 1; }
 
 .section-text {
   padding: 4rem 0 9rem;
@@ -1297,7 +1283,7 @@ h3.section-title {
       .section-text .right {
         display: none; } }
   .section-text .section-title {
-    font-size: 2rem;
+    font-size: 2.8rem;
     margin-bottom: 2rem; }
     @media screen and (min-width: 769px) {
       .section-text .section-title {
