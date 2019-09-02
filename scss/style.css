@@ -1098,7 +1098,7 @@ h3.section-title {
       position: fixed;
       right: 0;
       top: 0;
-      z-index: 1; }
+      z-index: 7; }
       .section-plans .plans-nav.fixed + .plans-list {
         padding-top: 7rem; }
     .section-plans .plans-nav a {
@@ -1150,12 +1150,18 @@ h3.section-title {
       line-height: 1.46;
       margin-bottom: 4rem;
       max-width: 34.5rem;
-      overflow: hidden;
+      /*overflow: hidden;*/
       padding-top: 1rem;
       position: relative;
       text-align: center;
       transition: all 0.3s linear;
       width: 34.5rem; }
+      .section-plans .plans-list > div[data-aos^=fade][data-aos^=fade] {
+        position: relative;
+        bottom: -100px;
+        transform: none; }
+        .section-plans .plans-list > div[data-aos^=fade][data-aos^=fade].aos-animate {
+          bottom: 0; }
       @media screen and (max-width: 768px) {
         .section-plans .plans-list > div[data-aos][data-aos-delay="400"] {
           transition-delay: 0s; } }
@@ -1177,6 +1183,67 @@ h3.section-title {
         .section-plans .plans-list > div {
           padding-bottom: 7rem;
           width: 32%; } }
+      .section-plans .plans-list > div .picture {
+        position: relative;
+        padding-bottom: 40px; }
+        .section-plans .plans-list > div .picture .card {
+          position: absolute;
+          bottom: 20px;
+          left: 30%; }
+        .section-plans .plans-list > div .picture .de {
+          position: absolute; }
+      .section-plans .plans-list > div.classic-plan .picture .card {
+        z-index: 1; }
+      .section-plans .plans-list > div.classic-plan .picture .de.decor {
+        right: 11%;
+        bottom: 110px; }
+      .section-plans .plans-list > div.classic-plan .picture .de.decor-1 {
+        bottom: 185px;
+        left: 0; }
+      .section-plans .plans-list > div.classic-plan .picture .de.decor-2 {
+        right: 0;
+        bottom: 190px; }
+      .section-plans .plans-list > div.premium-plan .picture .card {
+        z-index: 1; }
+      .section-plans .plans-list > div.premium-plan .picture .de.decor {
+        left: 30%;
+        bottom: 55px;
+        z-index: 4; }
+      .section-plans .plans-list > div.premium-plan .picture .de.decor-1 {
+        bottom: 20px;
+        right: -5px; }
+      .section-plans .plans-list > div.premium-plan .picture .de.decor-2 {
+        left: 39%;
+        bottom: 115px;
+        z-index: 3; }
+      .section-plans .plans-list > div.premium-plan .picture .de.decor-3 {
+        right: -15px;
+        bottom: 155px;
+        z-index: 2; }
+      .section-plans .plans-list > div.deluxe-plan .picture .box {
+        z-index: 1; }
+      .section-plans .plans-list > div.deluxe-plan .picture .card {
+        z-index: 2; }
+      .section-plans .plans-list > div.deluxe-plan .picture .de.decor {
+        left: 34%;
+        bottom: 70px;
+        z-index: 5; }
+      .section-plans .plans-list > div.deluxe-plan .picture .de.decor-1 {
+        bottom: 70px;
+        left: -15px;
+        z-index: -1; }
+      .section-plans .plans-list > div.deluxe-plan .picture .de.decor-2 {
+        right: 0;
+        bottom: 115px;
+        z-index: 3; }
+      .section-plans .plans-list > div.deluxe-plan .picture .de.decor-3 {
+        right: 30px;
+        bottom: 65px;
+        z-index: 4; }
+      .section-plans .plans-list > div.deluxe-plan .picture .de.decor-4 {
+        left: 90px;
+        bottom: 20px;
+        z-index: 6; }
     @media screen and (min-width: 769px) {
       .section-plans .plans-list h3.section-title {
         font-size: 2.6rem;

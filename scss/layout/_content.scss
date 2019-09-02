@@ -354,7 +354,7 @@ h3.section-title {
       position: fixed;
       right: 0;
       top: 0;
-      z-index: 1;
+      z-index: 7;
       + .plans-list {padding-top: 7rem;}
     }
 
@@ -407,12 +407,22 @@ h3.section-title {
       line-height: 1.46;
       margin-bottom: 4rem;
       max-width: 34.5rem;
-      overflow: hidden;
+      /*overflow: hidden;*/
       padding-top: 1rem;
       position: relative;
       text-align: center;
       transition: $default-transition;
       width: 34.5rem;
+
+      &[data-aos^=fade][data-aos^=fade] {
+        position: relative;
+        bottom: -100px;
+        transform: none;
+
+        &.aos-animate {
+          bottom: 0;
+        }
+      }
 
       &[data-aos][data-aos-delay="400"] {
         @media screen and (max-width: 768px) {
@@ -447,6 +457,123 @@ h3.section-title {
       @media screen and (min-width: 769px) {
         padding-bottom: 7rem;
         width: 32%;
+      }
+
+      .picture {
+        position: relative;
+        padding-bottom: 40px;
+
+        .card {
+          position: absolute;
+          bottom: 20px;
+          left: 30%;
+        }
+
+        .de {
+          position: absolute;
+        }
+      }
+
+      &.classic-plan {
+        .picture {
+          .card {
+            z-index: 1;
+          }
+
+          .de {
+            &.decor {
+              right: 11%;
+              bottom: 110px;
+            }
+
+            &.decor-1 {
+              bottom: 185px;
+              left: 0;
+            }
+
+            &.decor-2 {
+              right: 0;
+              bottom: 190px;
+            }
+          }
+        }
+      }
+
+      &.premium-plan {
+        .picture {
+          .card {
+            z-index: 1;
+          }
+
+          .de {
+            &.decor {
+              left: 30%;
+              bottom: 55px;
+              z-index: 4;
+            }
+
+            &.decor-1 {
+              bottom: 20px;
+              right: -5px;
+            }
+
+            &.decor-2 {
+              left: 39%;
+              bottom: 115px;
+              z-index: 3;
+            }
+
+            &.decor-3 {
+              right: -15px;
+              bottom: 155px;
+              z-index: 2;
+            }
+          }
+        }
+      }
+
+      &.deluxe-plan {
+        .picture {
+          .box {
+            z-index: 1;
+          }
+
+          .card {
+            z-index: 2;
+          }
+
+          .de {
+            &.decor {
+              left: 34%;
+              bottom: 70px;
+              z-index: 5;
+            }
+
+            &.decor-1 {
+              bottom: 70px;
+              left: -15px;
+              z-index: -1;
+            }
+
+            &.decor-2 {
+              right: 0;
+              bottom: 115px;
+              z-index: 3;
+            }
+
+            &.decor-3 {
+              right: 30px;
+              bottom: 65px;
+              z-index: 4;
+            }
+
+            &.decor-4 {
+              left: 90px;
+              bottom: 20px;
+              z-index: 6;
+            }
+          }
+        }
       }
     }
 
