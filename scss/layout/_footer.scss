@@ -9,12 +9,12 @@
 
   .wrapper {
     @media screen and (min-width: 769px) {
-      display: flex;
       align-items: center;
+      display: flex;
+      flex-direction: column;
       justify-content: center;
-
       p + p {
-        margin-left: 5px;
+        //margin-left: 5px;
       }
     }
   }
