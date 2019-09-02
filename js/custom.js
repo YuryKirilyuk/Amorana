@@ -68,9 +68,9 @@ $(function(){
         if($(window).width() <= '768') {
             $('html, body').animate({scrollTop: $(target).offset().top-65}, 500);
         }
-        $(this).addClass('active').siblings().removeClass('active');
-        $('.plans-list').children().removeClass('active');
-        $('.plans-list').find(target).addClass('active');
+        //$(this).addClass('active').siblings().removeClass('active');
+        //$('.plans-list').children().removeClass('active');
+        //$('.plans-list').find(target).addClass('active');
         return false;
     });
 

@@ -269,7 +269,7 @@ h3.section-title {
     margin-bottom: 2.5rem;
     padding: 5px 0;
     @media screen and (min-width: 1024px) {
-      max-width: 33rem;
+      //max-width: 33rem;
       margin-bottom: 5.5rem;
       margin-left: auto;
       margin-right: auto;
@@ -304,13 +304,14 @@ h3.section-title {
         &[href*="deluxe"].current {background: $black;}
       }
       @media screen and (min-width: 769px) {
-        &.active {
-          color: #fff;
-          font-weight: 300;
-        }
-        &[href*="classic"].active {background: $red;}
-        &[href*="premium"].active {background: $golden;}
-        &[href*="deluxe"].active {background: $black;}
+        color: #fff;
+        font-weight: 300;
+        max-width: 34.2rem;
+        width: 32%;
+
+        &[href*="classic"] {background: $red;}
+        &[href*="premium"] {background: $golden;}
+        &[href*="deluxe"] {background: $black;}
       }
 
     }
@@ -586,6 +587,7 @@ h3.section-title {
 
     .play-button {
       background: url(../img/icons/icon-play.svg) no-repeat center;
+      background-size: contain;
       height: 131px;
       margin: auto;
       position: absolute;
@@ -595,6 +597,10 @@ h3.section-title {
       left: 0;
       width: 150px;
       z-index: 1;
+      @media screen and (max-width: 768px) {
+        height: 80px;
+        width: 90px
+      }
     }
 
   }//.video-wrap

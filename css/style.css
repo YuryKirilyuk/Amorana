@@ -593,7 +593,7 @@ h3.section-title { font-size: 2.4rem; font-weight: normal; margin-bottom: 1.5rem
 
 .section-plans .plans-nav { display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; margin-bottom: 2.5rem; padding: 5px 0; }
 
-@media screen and (min-width: 1024px) { .section-plans .plans-nav { max-width: 33rem; margin-bottom: 5.5rem; margin-left: auto; margin-right: auto; } }
+@media screen and (min-width: 1024px) { .section-plans .plans-nav { margin-bottom: 5.5rem; margin-left: auto; margin-right: auto; } }
 
 .section-plans .plans-nav.fixed { background: #fff; box-shadow: 0 0 20px -5px rgba(0, 0, 0, 0.3); left: 0; padding: 5px 2rem; position: fixed; right: 0; top: 0; z-index: 1; }
 
@@ -606,10 +606,10 @@ h3.section-title { font-size: 2.4rem; font-weight: normal; margin-bottom: 1.5rem
   .section-plans .plans-nav a[href*="premium"].current { background: #FDB97B; }
   .section-plans .plans-nav a[href*="deluxe"].current { background: #000; } }
 
-@media screen and (min-width: 769px) { .section-plans .plans-nav a.active { color: #fff; font-weight: 300; }
-  .section-plans .plans-nav a[href*="classic"].active { background: #FC2D4D; }
-  .section-plans .plans-nav a[href*="premium"].active { background: #FDB97B; }
-  .section-plans .plans-nav a[href*="deluxe"].active { background: #000; } }
+@media screen and (min-width: 769px) { .section-plans .plans-nav a { color: #fff; font-weight: 300; max-width: 34.2rem; width: 32%; }
+  .section-plans .plans-nav a[href*="classic"] { background: #FC2D4D; }
+  .section-plans .plans-nav a[href*="premium"] { background: #FDB97B; }
+  .section-plans .plans-nav a[href*="deluxe"] { background: #000; } }
 
 .section-plans .plans-list { display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; margin: auto; }
 
@@ -711,7 +711,9 @@ h3.section-title { font-size: 2.4rem; font-weight: normal; margin-bottom: 1.5rem
 
 .section-video .video-wrap iframe, .section-video .video-wrap video { height: 100%; left: 0; position: absolute; top: 0; width: 100%; }
 
-.section-video .video-wrap .play-button { background: url(../img/icons/icon-play.svg) no-repeat center; height: 131px; margin: auto; position: absolute; top: 0; right: 0; bottom: 0; left: 0; width: 150px; z-index: 1; }
+.section-video .video-wrap .play-button { background: url(../img/icons/icon-play.svg) no-repeat center; background-size: contain; height: 131px; margin: auto; position: absolute; top: 0; right: 0; bottom: 0; left: 0; width: 150px; z-index: 1; }
+
+@media screen and (max-width: 768px) { .section-video .video-wrap .play-button { height: 80px; width: 90px; } }
 
 .section-text { padding: 4rem 0 9rem; text-align: center; }
 
