@@ -1,12 +1,12 @@
 @-webkit-keyframes slideIn {
-  0% {right: -300px;}
-  100% {right: 0;}
+  0% {right: -300px; top: -200px;}
+  100% {right: 0; top: 0;}
 }
 @-moz-keyframes slideIn {
-  0% {right: -300px;}
-  100% {right: 0;}
+  0% {right: -300px; top: -200px;}
+  100% {right: 0; top: 0;}
 }
 @keyframes slideIn {
-  0% {right: -300px;}
-  100% {right: 0;}
+  0% {right: -300px; top: -200px;}
+  100% {right: 0; top: 0;}
 }

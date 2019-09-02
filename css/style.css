@@ -472,11 +472,15 @@ img { height: auto; max-width: 100%; }
 
 .clearfix:after { content: ""; display: table; clear: both; }
 
-@-webkit-keyframes slideIn { 0% { right: -300px; }
-  100% { right: 0; } }
+@-webkit-keyframes slideIn { 0% { right: -300px;
+    top: -200px; }
+  100% { right: 0;
+    top: 0; } }
 
-@keyframes slideIn { 0% { right: -300px; }
-  100% { right: 0; } }
+@keyframes slideIn { 0% { right: -300px;
+    top: -200px; }
+  100% { right: 0;
+    top: 0; } }
 
 .site-footer { background: #000; color: #ccc; font-family: "HelveticaNeueCyr", sans-serif; font-size: 1.2rem; line-height: 1.8; padding: 1.5rem 0; text-align: center; }
 
@@ -767,7 +771,7 @@ h3.section-title { font-size: 2.4rem; font-weight: normal; margin-bottom: 1.5rem
 
 @media screen and (min-width: 769px) { .section-faq .faq-list li:last-child { border-bottom: none; } }
 
-.section-faq .faq-question { -webkit-align-items: center; -ms-flex-align: center; align-items: center; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; font-size: 1.8rem; font-weight: normal; }
+.section-faq .faq-question { -webkit-align-items: center; -ms-flex-align: center; align-items: center; cursor: pointer; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; font-size: 1.8rem; font-weight: normal; }
 
 @media screen and (min-width: 769px) { .section-faq .faq-question { font-size: 2.4rem; } }
 
