@@ -17,9 +17,6 @@ h3.section-title {
   position: relative;
 }
 
-
-
-
 .section-hero {
   padding-top: 8.5rem;
 
@@ -129,10 +126,64 @@ h3.section-title {
     @media screen and (max-width: 1024px) {display: none;}
   }
 
+
+
+  @-webkit-keyframes cardAnimation {
+    from {
+      opacity: 0;
+      right: -400px;
+      bottom: -50px;
+      transform: rotate(360deg) scale(0);
+    }
+    to {
+      opacity: 1;
+      right: 0;
+      bottom: 0;
+      transform: rotate(0) scale(1);
+    }
+  }
+
+  @keyframes cardAnimation {
+    from {
+      opacity: 0;
+      right: -400px;
+      bottom: -50px;
+      transform: rotate(360deg) scale(0);
+    }
+    to {
+      opacity: 1;
+      right: 0;
+      bottom: 0;
+      transform: rotate(0) scale(1);
+    }
+  }
+
   .hero-swiper-container {
     margin-left: -2rem;
     margin-right: -2rem;
     @media screen and (min-width: 1025px) {display: none;}
+
+    .swiper-slide {
+      position: relative;
+      padding-bottom: 50px;
+
+      .box-image {
+        position: absolute;
+        bottom: 0;
+        left: 34%;
+      }
+
+      &.swiper-slide-active {
+        .box-image {
+          -webkit-animation-name: cardAnimation;
+          animation-name: cardAnimation;
+          -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+          -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+        }
+      }
+    }
 
     .item-image {text-align: center;}
 
@@ -213,16 +264,35 @@ h3.section-title {
       padding-bottom: 1rem;
       padding-top: 2.3rem;
 
-      &:first-child {
-        background: none;
-        padding-top: 0;
-
-        @media screen and (min-width: 881px) {
-          background: url(../img/plants.svg) no-repeat center top;
-          padding-top: 2.3rem;
+      @media screen and (min-width: 881px) {
+        &.aos-init {
+          opacity: 1;
+          transform: none;
+          transition: none;
         }
       }
     }//.feature
+
+    .feature-wrap {
+      @media screen and (max-width: 880px) {
+        &.aos-init {
+          opacity: 1;
+          transform: none;
+          transition: none;
+        }
+      }
+      &:first-child {
+        .feature {
+          background: none;
+          padding-top: 0;
+
+          @media screen and (min-width: 881px) {
+            background: url(../img/plants.svg) no-repeat center top;
+            padding-top: 2.3rem;
+          }
+        }
+      }
+    }
   }//.features-list
 
 }//.section-gallery
@@ -335,6 +405,28 @@ h3.section-title {
       text-align: center;
       transition: $default-transition;
       width: 34.5rem;
+
+      &[data-aos][data-aos-delay="400"] {
+        @media screen and (max-width: 768px) {
+          transition-delay: 0s;
+        }
+        *[data-aos] {
+          @media screen and (min-width: 769px) {
+            transition-delay: .4s;
+          }
+        }
+      }
+
+      &[data-aos][data-aos-delay="800"] {
+        @media screen and (max-width: 768px) {
+          transition-delay: 0s;
+        }
+        *[data-aos] {
+          @media screen and (min-width: 769px) {
+            transition-delay: .8s;
+          }
+        }
+      }
 
       &:last-child {
         margin-bottom: 0;
@@ -570,15 +662,21 @@ h3.section-title {
 
     .play-button {
       background: url(../img/icons/icon-play.svg) no-repeat center;
-      height: 131px;
+      background-size: contain;
+      height: 60px;
       margin: auto;
       position: absolute;
       top: 0;
       right: 0;
       bottom: 0;
       left: 0;
-      width: 150px;
+      width: 60px;
       z-index: 1;
+
+      @media screen and (min-width: 769px) {
+        height: 150px;
+        width: 150px;
+      }
     }
 
   }//.video-wrap
@@ -802,7 +900,18 @@ h3.section-title {
     line-height: 1;
     @media screen and (min-width: 769px) {
       justify-content: center;
-      a {margin: 0 3rem;}
+      a {
+        margin: 0 3rem;
+      }
+    }
+  }
+
+  &.aos-animate {
+    [data-aos^=fade][data-aos^=fade].aos-init {
+      @media screen and (min-width: 769px) {
+        opacity: 1;
+        transform: translateZ(0);
+      }
     }
   }
 

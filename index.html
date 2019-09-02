@@ -12,7 +12,7 @@
 	<link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
 	<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.min.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" type="text/css" href="scss/style.css" />
 	<link rel="stylesheet" type="text/css" href="css/style-alex.css" />
 
 </head>
@@ -27,7 +27,7 @@
 
     <main class="content">
 
-        <section class="section-hero" data-aos="fade-in">
+        <section class="section-hero" data-aos="fade-up">
             <div class="wrapper">
                 <div class="hero-left">
                     <div class="logo" data-aos="fade-down">
@@ -57,19 +57,28 @@
 
                             <div class="swiper-slide">
                                 <div class="item-image">
-                                    <img alt="" src="img/plans/classic.png" />
+                                    <img alt="" src="img/plans/classic-booklet.png" />
+                                </div>
+                                <div class="box-image">
+                                    <img alt="" src="img/plans/classic-card.png" />
                                 </div>
                             </div>
 
                             <div class="swiper-slide">
                                 <div class="item-image">
-                                    <img alt="" src="img/plans/premium.png" />
+                                    <img alt="" src="img/plans/premium-booklet.png" />
+                                </div>
+                                <div class="box-image">
+                                    <img alt="" src="img/plans/premium-card.png" />
                                 </div>
                             </div>
 
                             <div class="swiper-slide">
                                 <div class="item-image">
-                                    <img alt="" src="img/plans/deluxe.png" />
+                                    <img alt="" src="img/plans/deluxe-booklet.png" />
+                                </div>
+                                <div class="box-image">
+                                    <img alt="" src="img/plans/deluxe-card.png" />
                                 </div>
                             </div>
 
@@ -94,17 +103,25 @@
             <div class="wrapper">
                 <h3 class="section-title">Der Original Schweizer<br />Erotik Adventskalender von Amorana</h3>
                 <div class="features-list">
-                    <div class="feature" data-aos="fade-left">
-                        Vollgepackt mit hochwertigen Produkten
+                    <div class="feature-wrap" data-aos="fade-down">
+                        <div class="feature" data-aos="fade-left">
+                            Vollgepackt mit hochwertigen Produkten
+                        </div>
                     </div>
-                    <div class="feature" data-aos="fade-right">
-                        Limitierte Auflage und Lieferung am nächsten Tag
+                    <div class="feature-wrap" data-aos="fade-down" data-aos-delay="100">
+                        <div class="feature" data-aos="fade-right">
+                            Limitierte Auflage und Lieferung am nächsten Tag
+                        </div>
                     </div>
-                    <div class="feature" data-aos="fade-left">
-                        Vollgepackt mit hochwertigen Produkten
+                    <div class="feature-wrap" data-aos="fade-down" data-aos-delay="200">
+                        <div class="feature" data-aos="fade-left">
+                            Vollgepackt mit hochwertigen Produkten
+                        </div>
                     </div>
-                    <div class="feature" data-aos="fade-right">
-                        Limitierte Auflage und Lieferung am nächsten Tag
+                    <div class="feature-wrap" data-aos="fade-down" data-aos-delay="300">
+                        <div class="feature" data-aos="fade-right">
+                            Limitierte Auflage und Lieferung am nächsten Tag
+                        </div>
                     </div>
                 </div>
             </div>
@@ -130,7 +147,7 @@
                 </div>
                 <div class="plans-list">
 
-                    <div id="classic-plan" class="classic-plan">
+                    <div id="classic-plan" class="classic-plan" data-aos="fade-up">
                         <h3 class="section-title" data-aos="fade-down">Classic</h3>
                         <div class="plan-image">
                             <img alt="" src="img/plans/classic-big.png" data-aos="zoom-in" />
@@ -181,7 +198,7 @@
                     </div><!-- //.classic-plan -->
 
 
-                    <div id="premium-plan" class="premium-plan active">
+                    <div id="premium-plan" class="premium-plan active" data-aos="fade-up" data-aos-delay="400">
                         <h3 class="section-title" data-aos="fade-down">Premium</h3>
                         <div class="plan-image">
                             <img alt="" src="img/plans/premium-big.png" data-aos="zoom-in" />
@@ -232,7 +249,7 @@
                     </div><!-- //.premium-plan -->
 
 
-                    <div id="deluxe-plan" class="deluxe-plan">
+                    <div id="deluxe-plan" class="deluxe-plan" data-aos="fade-up" data-aos-delay="800">
                         <h3 class="section-title" data-aos="fade-down">Deluxe</h3>
                         <div class="plan-image">
                             <img alt="" src="img/plans/deluxe-big.png" data-aos="zoom-in" />
@@ -289,7 +306,7 @@
 
 
 
-        <section class="section-testimonials" data-aos="fade-in-up">
+        <section class="section-testimonials" data-aos="fade-up">
             <div class="wrapper">
                 <div class="quote-wrapper">
 
@@ -326,7 +343,7 @@
 
                     </div>
                 </div>
-                <div class="quote-pic">
+                <div class="quote-pic" data-aos="fade-left">
                     <img src="img/testimonial-pic.jpg" alt="">
                 </div>
 
@@ -337,10 +354,10 @@
 
         <section class="section-video">
             <div class="wrapper">
-                <h3 class="section-title" data-aos="fade-in-down">Kalender Unboxing</h3>
+                <h3 class="section-title" data-aos="fade-down">Kalender Unboxing</h3>
                 <div class="video-wrap">
                     <div class="play-button js-video" data-aos="zoom-in" data-fancybox href="https://www.youtube.com/embed/t7hO3ZGGJJI?rel=0&fs=1&autoplay=1"></div>
-                    <video autoplay="autoplay" loop muted data-aos="fade-in">
+                    <video autoplay="autoplay" loop muted data-aos="fade-up">
                         <source src="img/video.mp4">
                     </video>
                 </div>
@@ -352,7 +369,7 @@
         <section class="section-text">
             <div class="wrapper">
                 <div class="left">
-                    <h3 class="section-title" data-aos="fade-in-down">Amorana Adventskalender</h3>
+                    <h3 class="section-title" data-aos="fade-down">Amorana Adventskalender</h3>
                     <p data-aos="zoom-in">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ipsum platea mauris maecenas pellentesque magna. In neque, diam tellus non iaculis nullam dui. Mattis vel mauris adipiscing vestibulum nec ut metus, amet etiam. In sagittis nunc, enim dolor justo, porttitor tincidunt scelerisque. Rhoncus at bibendum sed pharetra. Consectetur purus sit neque quis feugiat aliquet orci risus fusce. Consequat sed eu ipsum, nam bibendum orci neque urna magnis. Laoreet.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ipsum platea mauris maecenas pellentesque magna. In neque, diam tellus non iaculis nullam dui. Mattis vel mauris adipiscing vestibulum nec ut metus, amet etiam. In sagittis nunc, enim dolor justo, porttitor tincidunt scelerisque. Rhoncus at bibendum sed pharetra. </p>
                 </div>
                 <div class="right" data-aos="zoom-in-left">
@@ -368,7 +385,7 @@
                 <img src="img/img6.png" alt="Image" />
             </div>
             <div class="wrapper">
-                <h3 class="section-title" data-aos="fade-in-down">FAQ</h3>
+                <h3 class="section-title" data-aos="fade-down">FAQ</h3>
                 <ul class="faq-list">
                     <li data-aos="zoom-in-down">
                         <h4 class="faq-question">Can I ask you a question and get an honest answer?
@@ -428,24 +445,24 @@
         </section><!-- //.section-testimonial -->
 
 
-        <section class="section-socials" data-aos="fade-in">
+        <section class="section-socials" data-aos="fade-up">
             <div class="wrapper">
-                <a href="#" target="_blank" data-aos="fade-in-down">
+                <a href="#" target="_blank" data-aos="fade-down">
                     <svg class="icon-instagram">
                         <use xlink:href="img/icons/sprites.svg#icon-instagram"></use>
                     </svg>
                 </a>
-                <a href="#" target="_blank" data-aos="fade-in-down" data-aos-delay="200">
+                <a href="#" target="_blank" data-aos="fade-down" data-aos-delay="200">
                     <svg class="icon-facebook">
                         <use xlink:href="img/icons/sprites.svg#icon-facebook"></use>
                     </svg>
                 </a>
-                <a href="#" target="_blank" data-aos="fade-in-down" data-aos-delay="400">
+                <a href="#" target="_blank" data-aos="fade-down" data-aos-delay="400">
                     <svg class="icon-twitter">
                         <use xlink:href="img/icons/sprites.svg#icon-twitter"></use>
                     </svg>
                 </a>
-                <a href="#" target="_blank" data-aos="fade-in-down" data-aos-delay="600">
+                <a href="#" target="_blank" data-aos="fade-down" data-aos-delay="600">
                     <svg class="icon-you-tube">
                         <use xlink:href="img/icons/sprites.svg#icon-you-tube"></use>
                     </svg>
