@@ -570,9 +570,9 @@ h3.section-title { font-size: 2.4rem; font-weight: normal; margin-bottom: 1.5rem
 
 .section-hero .hero-swiper-container .swiper-slide { position: relative; padding-bottom: 50px; }
 
-.section-hero .hero-swiper-container .swiper-slide .box-image { position: absolute; bottom: 0; left: 34%; }
+.section-hero .hero-swiper-container .swiper-slide .box-image { position: absolute; bottom: 0; left: 34%; opacity: 0; }
 
-.section-hero .hero-swiper-container .swiper-slide.swiper-slide-active .box-image { -webkit-animation-name: cardAnimation; animation-name: cardAnimation; -webkit-animation-duration: 1s; animation-duration: 1s; -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards; }
+.section-hero .hero-swiper-container .swiper-slide.swiper-slide-active .box-image { -webkit-animation-name: cardAnimation; animation-name: cardAnimation; -webkit-animation-duration: 1s; animation-duration: 1s; -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards; -webkit-animation-delay: .3s; animation-delay: .3s; }
 
 .section-hero .hero-swiper-container .item-image { text-align: center; }
 

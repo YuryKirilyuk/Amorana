@@ -179,6 +179,7 @@ h3.section-title {
         position: absolute;
         bottom: 0;
         left: 34%;
+        opacity: 0;
       }
 
       &.swiper-slide-active {
@@ -189,6 +190,7 @@ h3.section-title {
           animation-duration: 1s;
           -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+          animation-delay: .3s;
         }
       }
     }
