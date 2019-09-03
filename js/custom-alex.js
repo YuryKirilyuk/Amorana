@@ -40,7 +40,10 @@ $(document).ready(function(){
         });
     }
 
-    AOS.init();
+    AOS.init({
+        mirror: false,
+        once: true
+    });
     /*AOS.init({
         // Global settings:
         disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
@@ -81,4 +84,8 @@ $(document).ready(function(){
         }
     });
 
+});
+
+$(window).on('load', function () {
+    AOS.refresh();
 });

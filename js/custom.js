@@ -114,7 +114,7 @@ function setPlanNavState(){
     }
 }
 function setMenuItemState(){
-    if(windowScrollTop >= classicPlanOffset.top - 180) plansNav.find('a[href*="classic-plan"]').addClass('current').siblings().removeClass('current');
-    if(windowScrollTop >= premiumPlanOffset.top - 180) plansNav.find('a[href*="premium-plan"]').addClass('current').siblings().removeClass('current');
-    if(windowScrollTop >= deluxePlanOffset.top - 180) plansNav.find('a[href*="deluxe-plan"]').addClass('current').siblings().removeClass('current');
+    if(windowScrollTop >= classicPlanOffset.top - 250) plansNav.find('a[href*="classic-plan"]').addClass('current').siblings().removeClass('current');
+    if(windowScrollTop >= premiumPlanOffset.top - 250) plansNav.find('a[href*="premium-plan"]').addClass('current').siblings().removeClass('current');
+    if(windowScrollTop >= deluxePlanOffset.top - 250) plansNav.find('a[href*="deluxe-plan"]').addClass('current').siblings().removeClass('current');
 }

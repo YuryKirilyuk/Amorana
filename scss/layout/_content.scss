@@ -17,9 +17,6 @@ h3.section-title {
   position: relative;
 }
 
-
-
-
 .section-hero {
   padding-top: 8.5rem;
   z-index: 1;
@@ -133,10 +130,64 @@ h3.section-title {
     @media screen and (max-width: 1024px) {display: none;}
   }
 
+
+
+  @-webkit-keyframes cardAnimation {
+    from {
+      opacity: 0;
+      right: -400px;
+      bottom: -50px;
+      transform: rotate(360deg) scale(0);
+    }
+    to {
+      opacity: 1;
+      right: 0;
+      bottom: 0;
+      transform: rotate(0) scale(1);
+    }
+  }
+
+  @keyframes cardAnimation {
+    from {
+      opacity: 0;
+      right: -400px;
+      bottom: -50px;
+      transform: rotate(360deg) scale(0);
+    }
+    to {
+      opacity: 1;
+      right: 0;
+      bottom: 0;
+      transform: rotate(0) scale(1);
+    }
+  }
+
   .hero-swiper-container {
     margin-left: -2rem;
     margin-right: -2rem;
     @media screen and (min-width: 1025px) {display: none;}
+
+    .swiper-slide {
+      position: relative;
+      padding-bottom: 50px;
+
+      .box-image {
+        position: absolute;
+        bottom: 0;
+        left: 34%;
+      }
+
+      &.swiper-slide-active {
+        .box-image {
+          -webkit-animation-name: cardAnimation;
+          animation-name: cardAnimation;
+          -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+          -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+        }
+      }
+    }
 
     .item-image {text-align: center;}
 
@@ -217,16 +268,35 @@ h3.section-title {
       padding-bottom: 1rem;
       padding-top: 2.3rem;
 
-      &:first-child {
-        background: none;
-        padding-top: 0;
-
-        @media screen and (min-width: 881px) {
-          background: url(../img/plants.svg) no-repeat center top;
-          padding-top: 2.3rem;
+      @media screen and (min-width: 881px) {
+        &.aos-init {
+          opacity: 1;
+          transform: none;
+          transition: none;
         }
       }
     }//.feature
+
+    .feature-wrap {
+      @media screen and (max-width: 880px) {
+        &.aos-init {
+          opacity: 1;
+          transform: none;
+          transition: none;
+        }
+      }
+      &:first-child {
+        .feature {
+          background: none;
+          padding-top: 0;
+
+          @media screen and (min-width: 881px) {
+            background: url(../img/plants.svg) no-repeat center top;
+            padding-top: 2.3rem;
+          }
+        }
+      }
+    }
   }//.features-list
 
 }//.section-gallery
@@ -285,7 +355,7 @@ h3.section-title {
       position: fixed;
       right: 0;
       top: 0;
-      z-index: 1;
+      z-index: 7;
       + .plans-list {padding-top: 7rem;}
     }
 
@@ -336,18 +406,55 @@ h3.section-title {
       font-size: 1.5rem;
       font-weight: 300;
       line-height: 1.46;
-      margin-bottom: 4rem;
+      padding-top: 6rem;
       max-width: 34.5rem;
-      overflow: hidden;
-      padding-top: 1rem;
+      /*overflow: hidden;*/
       position: relative;
       text-align: center;
       transition: $default-transition;
       width: 100%;
 
-      &:last-child {
-        margin-bottom: 0;
+      @media screen and (min-width: 769px) {
+        padding-top: 0;
+      }
 
+      &[data-aos^=fade][data-aos^=fade] {
+        position: relative;
+        bottom: -100px;
+        transform: none;
+
+        &.aos-animate {
+          bottom: 0;
+        }
+      }
+
+      &[data-aos][data-aos-delay="400"] {
+        @media screen and (max-width: 768px) {
+          transition-delay: 0s;
+        }
+        *[data-aos] {
+          @media screen and (min-width: 769px) {
+            transition-delay: .4s;
+          }
+        }
+      }
+
+      &[data-aos][data-aos-delay="800"] {
+        @media screen and (max-width: 768px) {
+          transition-delay: 0s;
+        }
+        *[data-aos] {
+          @media screen and (min-width: 769px) {
+            transition-delay: .8s;
+          }
+        }
+      }
+
+      &:first-child {
+        padding-top: 0;
+      }
+
+      &:last-child {
         @media screen and (min-width: 769px) {
           margin-bottom: 4rem;
         }
@@ -356,6 +463,123 @@ h3.section-title {
       @media screen and (min-width: 769px) {
         padding-bottom: 7rem;
         width: 32%;
+      }
+
+      .picture {
+        position: relative;
+        padding-bottom: 40px;
+
+        .card {
+          position: absolute;
+          bottom: 20px;
+          left: 30%;
+        }
+
+        .de {
+          position: absolute;
+        }
+      }
+
+      &.classic-plan {
+        .picture {
+          .card {
+            z-index: 1;
+          }
+
+          .de {
+            &.decor {
+              right: 11%;
+              bottom: 110px;
+            }
+
+            &.decor-1 {
+              bottom: 185px;
+              left: 0;
+            }
+
+            &.decor-2 {
+              right: 0;
+              bottom: 190px;
+            }
+          }
+        }
+      }
+
+      &.premium-plan {
+        .picture {
+          .card {
+            z-index: 1;
+          }
+
+          .de {
+            &.decor {
+              left: 30%;
+              bottom: 55px;
+              z-index: 4;
+            }
+
+            &.decor-1 {
+              bottom: 20px;
+              right: -5px;
+            }
+
+            &.decor-2 {
+              left: 39%;
+              bottom: 115px;
+              z-index: 3;
+            }
+
+            &.decor-3 {
+              right: -15px;
+              bottom: 155px;
+              z-index: 2;
+            }
+          }
+        }
+      }
+
+      &.deluxe-plan {
+        .picture {
+          .box {
+            z-index: 1;
+          }
+
+          .card {
+            z-index: 2;
+          }
+
+          .de {
+            &.decor {
+              left: 34%;
+              bottom: 70px;
+              z-index: 5;
+            }
+
+            &.decor-1 {
+              bottom: 70px;
+              left: -15px;
+              z-index: -1;
+            }
+
+            &.decor-2 {
+              right: 0;
+              bottom: 115px;
+              z-index: 3;
+            }
+
+            &.decor-3 {
+              right: 30px;
+              bottom: 65px;
+              z-index: 4;
+            }
+
+            &.decor-4 {
+              left: 90px;
+              bottom: 20px;
+              z-index: 6;
+            }
+          }
+        }
       }
     }
 
@@ -590,18 +814,19 @@ h3.section-title {
     .play-button {
       background: url(../img/icons/icon-play.svg) no-repeat center;
       background-size: contain;
-      height: 131px;
+      height: 60px;
       margin: auto;
       position: absolute;
       top: 0;
       right: 0;
       bottom: 0;
       left: 0;
-      width: 150px;
+      width: 60px;
       z-index: 1;
-      @media screen and (max-width: 768px) {
-        height: 80px;
-        width: 90px
+
+      @media screen and (min-width: 769px) {
+        height: 150px;
+        width: 150px;
       }
     }
 
@@ -827,7 +1052,18 @@ h3.section-title {
     line-height: 1;
     @media screen and (min-width: 769px) {
       justify-content: center;
-      a {margin: 0 3rem;}
+      a {
+        margin: 0 3rem;
+      }
+    }
+  }
+
+  &.aos-animate {
+    [data-aos^=fade][data-aos^=fade].aos-init {
+      @media screen and (min-width: 769px) {
+        opacity: 1;
+        transform: translateZ(0);
+      }
     }
   }
 
