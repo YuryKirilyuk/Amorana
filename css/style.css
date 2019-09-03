@@ -545,24 +545,24 @@ h3.section-title { font-size: 2.4rem; font-weight: normal; margin-bottom: 1.5rem
 @-webkit-keyframes cardAnimation { from { opacity: 0;
     right: -400px;
     bottom: -50px;
-    -webkit-transform: rotate(360deg) scale(0);
-            transform: rotate(360deg) scale(0); }
+    -webkit-transform: scale(0);
+            transform: scale(0); }
   to { opacity: 1;
     right: 0;
     bottom: 0;
-    -webkit-transform: rotate(0) scale(1);
-            transform: rotate(0) scale(1); } }
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
 
 @keyframes cardAnimation { from { opacity: 0;
     right: -400px;
     bottom: -50px;
-    -webkit-transform: rotate(360deg) scale(0);
-            transform: rotate(360deg) scale(0); }
+    -webkit-transform: scale(0);
+            transform: scale(0); }
   to { opacity: 1;
     right: 0;
     bottom: 0;
-    -webkit-transform: rotate(0) scale(1);
-            transform: rotate(0) scale(1); } }
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
 
 .section-hero .hero-swiper-container { margin-left: -2rem; margin-right: -2rem; }
 
@@ -719,7 +719,7 @@ h3.section-title { font-size: 2.4rem; font-weight: normal; margin-bottom: 1.5rem
 
 @media screen and (min-width: 769px) { .section-plans .plans-list h3.section-title { font-size: 2.6rem; margin-top: 1.5rem; } }
 
-@media screen and (min-width: 1101px) { .section-plans .plans-list .plan-image { min-height: 32rem; } }
+@media screen and (min-width: 1101px) { .section-plans .plans-list .plan-image { min-height: 35rem; } }
 
 .section-plans .plans-list .plan-info { margin-top: .8rem; margin-bottom: 2rem; padding: 0 1.5rem; }
 
