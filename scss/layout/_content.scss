@@ -25,7 +25,8 @@ h3.section-title {
   z-index: 1;
 
   &:before {
-    background: url(../img/pine.png) no-repeat right -100px top;
+    background: url(../img/decor_01.png) no-repeat right top;
+    background-size: contain;
     content: '';
     height: 318px;
     position: absolute;
@@ -36,7 +37,7 @@ h3.section-title {
     animation: slideIn 1.2s ease-in-out;
 
     @media screen and (max-width: 1024px) {
-      background-position: right -25px top;
+      background-position: right top;
       background-size: 328px 184px;
     }
   }
@@ -187,7 +188,7 @@ h3.section-title {
     @media screen and (min-width: 1024px) {
       left: 0;
       top: -55px;
-      width: 310px;
+      width: 315px;
     }
   }
 
@@ -342,7 +343,7 @@ h3.section-title {
       position: relative;
       text-align: center;
       transition: $default-transition;
-      width: 34.5rem;
+      width: 100%;
 
       &:last-child {
         margin-bottom: 0;

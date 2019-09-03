@@ -500,9 +500,9 @@ h3.section-title { font-size: 2.4rem; font-weight: normal; margin-bottom: 1.5rem
 
 .section-hero { padding-top: 8.5rem; z-index: 1; }
 
-.section-hero:before { background: url(../img/pine.png) no-repeat right -100px top; content: ''; height: 318px; position: absolute; top: 0; right: 0; width: 567px; -webkit-animation: slideIn 1.2s ease-in-out; animation: slideIn 1.2s ease-in-out; }
+.section-hero:before { background: url(../img/decor_01.png) no-repeat right top; background-size: contain; content: ''; height: 318px; position: absolute; top: 0; right: 0; width: 567px; -webkit-animation: slideIn 1.2s ease-in-out; animation: slideIn 1.2s ease-in-out; }
 
-@media screen and (max-width: 1024px) { .section-hero:before { background-position: right -25px top; background-size: 328px 184px; } }
+@media screen and (max-width: 1024px) { .section-hero:before { background-position: right top; background-size: 328px 184px; } }
 
 .section-hero:after { content: ''; background: linear-gradient(360deg, #C4C4C4 0%, rgba(196, 196, 196, 0) 32.98%); height: 100%; opacity: 0.1; position: absolute; top: 0; left: 0; width: 100%; }
 
@@ -564,7 +564,7 @@ h3.section-title { font-size: 2.4rem; font-weight: normal; margin-bottom: 1.5rem
 
 .section-features .image-wrap { left: -10px; position: absolute; top: 13rem; width: 150px; }
 
-@media screen and (min-width: 1024px) { .section-features .image-wrap { left: 0; top: -55px; width: 310px; } }
+@media screen and (min-width: 1024px) { .section-features .image-wrap { left: 0; top: -55px; width: 315px; } }
 
 .section-features .section-title { font-size: 2.8rem; font-weight: 400; line-height: 1.25; margin: 0 auto 6.8rem; }
 
@@ -627,7 +627,7 @@ h3.section-title { font-size: 2.4rem; font-weight: normal; margin-bottom: 1.5rem
 
 @media screen and (max-width: 709px) { .section-plans .plans-list { -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; } }
 
-.section-plans .plans-list > div { font-size: 1.5rem; font-weight: 300; line-height: 1.46; margin-bottom: 4rem; max-width: 34.5rem; overflow: hidden; padding-top: 1rem; position: relative; text-align: center; transition: all 0.3s linear; width: 34.5rem; }
+.section-plans .plans-list > div { font-size: 1.5rem; font-weight: 300; line-height: 1.46; margin-bottom: 4rem; max-width: 34.5rem; overflow: hidden; padding-top: 1rem; position: relative; text-align: center; transition: all 0.3s linear; width: 100%; }
 
 .section-plans .plans-list > div:last-child { margin-bottom: 0; }
 
