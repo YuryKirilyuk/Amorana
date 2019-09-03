@@ -31,7 +31,7 @@ h3.section-title {
     //transition: all .5s;
     right: 0;
     width: 567px;
-    animation: slideIn 1.2s ease-in-out;
+    animation: slideIn 1.1s ease-in-out .8s;
 
     @media screen and (max-width: 1024px) {
       background-position: right top;
@@ -451,7 +451,7 @@ h3.section-title {
       }
 
       &:first-child {
-        padding-top: 0;
+        //padding-top: 0;
       }
 
       &:last-child {
@@ -461,7 +461,7 @@ h3.section-title {
       }
 
       @media screen and (min-width: 769px) {
-        padding-bottom: 7rem;
+        //padding-bottom: 7rem;
         width: 32%;
       }
 
@@ -685,7 +685,7 @@ h3.section-title {
       @media screen and (min-width: 769px) {
         bottom: 0;
         left: 0;
-        position: absolute;
+        //position: absolute;
         width: 100%;
       }
       @media screen and (min-width: 710px) and (max-width: 1024px) {font-size: 2rem;}
@@ -1005,7 +1005,7 @@ h3.section-title {
   line-height: 1.33;
 
   @media screen and (min-width: 769px) {
-    display: none;
+    //display: none;
   }
 
   .quote {

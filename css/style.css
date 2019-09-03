@@ -473,12 +473,12 @@ img { height: auto; max-width: 100%; }
 .clearfix:after { content: ""; display: table; clear: both; }
 
 @-webkit-keyframes slideIn { 0% { right: -300px;
-    top: -200px; }
+    top: -350px; }
   100% { right: 0;
     top: 0; } }
 
 @keyframes slideIn { 0% { right: -300px;
-    top: -200px; }
+    top: -350px; }
   100% { right: 0;
     top: 0; } }
 
@@ -500,7 +500,7 @@ h3.section-title { font-size: 2.4rem; font-weight: normal; margin-bottom: 1.5rem
 
 .section-hero { padding-top: 8.5rem; z-index: 1; }
 
-.section-hero:before { background: url(../img/decor_01.png) no-repeat right top; background-size: contain; content: ''; height: 318px; position: absolute; top: 0; right: 0; width: 567px; -webkit-animation: slideIn 1.2s ease-in-out; animation: slideIn 1.2s ease-in-out; }
+.section-hero:before { background: url(../img/decor_01.png) no-repeat right top; background-size: contain; content: ''; height: 318px; position: absolute; top: 0; right: 0; width: 567px; -webkit-animation: slideIn 1.1s ease-in-out .8s; animation: slideIn 1.1s ease-in-out .8s; }
 
 @media screen and (max-width: 1024px) { .section-hero:before { background-position: right top; background-size: 328px 184px; } }
 
@@ -675,11 +675,9 @@ h3.section-title { font-size: 2.4rem; font-weight: normal; margin-bottom: 1.5rem
 
 @media screen and (min-width: 769px) { .section-plans .plans-list > div[data-aos][data-aos-delay="800"] *[data-aos] { transition-delay: .8s; } }
 
-.section-plans .plans-list > div:first-child { padding-top: 0; }
-
 @media screen and (min-width: 769px) { .section-plans .plans-list > div:last-child { margin-bottom: 4rem; } }
 
-@media screen and (min-width: 769px) { .section-plans .plans-list > div { padding-bottom: 7rem; width: 32%; } }
+@media screen and (min-width: 769px) { .section-plans .plans-list > div { width: 32%; } }
 
 .section-plans .plans-list > div .picture { position: relative; padding-bottom: 40px; }
 
@@ -749,7 +747,7 @@ h3.section-title { font-size: 2.4rem; font-weight: normal; margin-bottom: 1.5rem
 
 .section-plans .plans-list .btn:before { content: ''; position: absolute; bottom: 100%; height: 6.8rem; left: 0; width: 100%; }
 
-@media screen and (min-width: 769px) { .section-plans .plans-list .btn { bottom: 0; left: 0; position: absolute; width: 100%; } }
+@media screen and (min-width: 769px) { .section-plans .plans-list .btn { bottom: 0; left: 0; width: 100%; } }
 
 @media screen and (min-width: 710px) and (max-width: 1024px) { .section-plans .plans-list .btn { font-size: 2rem; } }
 
@@ -874,8 +872,6 @@ h3.section-title { font-size: 2.4rem; font-weight: normal; margin-bottom: 1.5rem
 @media screen and (min-width: 769px) { .section-faq .faq-answer p { padding-bottom: 1rem; } }
 
 .section-quote { font-family: 'Palatino', serif; font-style: italic; font-size: 1.1rem; font-weight: normal; line-height: 1.33; }
-
-@media screen and (min-width: 769px) { .section-quote { display: none; } }
 
 .section-quote .quote { background: url(../img/bg/bg_testimonial.png) no-repeat right 2rem; max-width: 60rem; margin: auto; padding: 13rem 11.5rem 8rem 0; }
 

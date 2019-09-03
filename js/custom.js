@@ -13,8 +13,8 @@ if ($('.section-plans').length > 0) {
         premiumPlanOffset = premiumPlan.offset(),
         deluxePlanOffset = deluxePlan.offset();
 
-    console.log('navOffsetTop = ' + navOffsetTop);
-    console.log('windowScrollTop = ' + windowScrollTop);
+    //console.log('navOffsetTop = ' + navOffsetTop);
+    //console.log('windowScrollTop = ' + windowScrollTop);
 
 }
 
@@ -66,11 +66,8 @@ $(function(){
     $('.plans-nav a[href^="#"]').click(function(){
         var target = $(this).attr('href');
         if($(window).width() <= '768') {
-            $('html, body').animate({scrollTop: $(target).offset().top-65}, 500);
+            $('html, body').animate({scrollTop: $(target).offset().top-45}, 500);
         }
-        //$(this).addClass('active').siblings().removeClass('active');
-        //$('.plans-list').children().removeClass('active');
-        //$('.plans-list').find(target).addClass('active');
         return false;
     });
 
@@ -101,6 +98,15 @@ $(function(){
         setPlanNavState();
         setMenuItemState();
     }
+
+
+    $('.dot').on('click', function(){
+        var parentoffset = $(this).parents('[id*="plan"]');
+        $('html, body').animate({scrollTop: $(parentoffset).offset().top}, 500);
+        return false;
+    });
+
+
 
 });
 
