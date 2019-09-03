@@ -661,7 +661,8 @@ h3.section-title { font-size: 2.4rem; font-weight: normal; margin-bottom: 1.5rem
 
 .section-plans .plans-list > div { font-size: 1.5rem; font-weight: 300; line-height: 1.46; padding-top: 6rem; max-width: 34.5rem; /*overflow: hidden;*/ position: relative; text-align: center; transition: all 0.3s linear; width: 100%; }
 
-@media screen and (min-width: 769px) { .section-plans .plans-list > div { padding-top: 0; } }
+@media screen and (min-width: 769px) { .section-plans .plans-list > div { display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; padding-top: 0; }
+  .section-plans .plans-list > div .aos-init { margin-top: auto; } }
 
 .section-plans .plans-list > div[data-aos^=fade][data-aos^=fade] { position: relative; bottom: -100px; -webkit-transform: none; -ms-transform: none; transform: none; }
 
@@ -674,8 +675,6 @@ h3.section-title { font-size: 2.4rem; font-weight: normal; margin-bottom: 1.5rem
 @media screen and (max-width: 768px) { .section-plans .plans-list > div[data-aos][data-aos-delay="800"] { transition-delay: 0s; } }
 
 @media screen and (min-width: 769px) { .section-plans .plans-list > div[data-aos][data-aos-delay="800"] *[data-aos] { transition-delay: .8s; } }
-
-@media screen and (min-width: 769px) { .section-plans .plans-list > div:last-child { margin-bottom: 4rem; } }
 
 @media screen and (min-width: 769px) { .section-plans .plans-list > div { width: 32%; } }
 
@@ -723,7 +722,7 @@ h3.section-title { font-size: 2.4rem; font-weight: normal; margin-bottom: 1.5rem
 
 .section-plans .plans-list .plan-info { margin-top: .8rem; margin-bottom: 2rem; padding: 0 1.5rem; }
 
-@media screen and (min-width: 769px) { .section-plans .plans-list .plan-info { margin-top: -.7rem; } }
+@media screen and (min-width: 769px) { .section-plans .plans-list .plan-info { margin-top: -.7rem; min-height: 10.5rem; } }
 
 .section-plans .plans-list .plan-features { margin-bottom: 1rem; }
 

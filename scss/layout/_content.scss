@@ -423,7 +423,12 @@ h3.section-title {
       width: 100%;
 
       @media screen and (min-width: 769px) {
+        display: flex;
+        flex-direction: column;
         padding-top: 0;
+        .aos-init {
+          margin-top: auto;
+        }
       }
 
       &[data-aos^=fade][data-aos^=fade] {
@@ -464,7 +469,7 @@ h3.section-title {
 
       &:last-child {
         @media screen and (min-width: 769px) {
-          margin-bottom: 4rem;
+          //margin-bottom: 4rem;
         }
       }
 
@@ -611,6 +616,7 @@ h3.section-title {
 
       @media screen and (min-width: 769px) {
         margin-top: -.7rem;
+        min-height: 10.5rem;
       }
     }
 
