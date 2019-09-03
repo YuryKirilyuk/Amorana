@@ -266,6 +266,8 @@ h3.section-title {
     display: flex;
     font-size: 1.5rem;
     justify-content: space-between;
+    margin: auto;
+    max-width: 80rem;
     @media screen and (max-width: 880px) {flex-direction: column;}
 
     .feature {
