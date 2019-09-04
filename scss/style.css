@@ -774,21 +774,21 @@ img {
 @-webkit-keyframes slideIn {
   0% {
     right: -300px;
-    top: -200px; }
+    top: -350px; }
   100% {
     right: 0;
     top: 0; } }
 @-moz-keyframes slideIn {
   0% {
     right: -300px;
-    top: -200px; }
+    top: -350px; }
   100% {
     right: 0;
     top: 0; } }
 @keyframes slideIn {
   0% {
     right: -300px;
-    top: -200px; }
+    top: -350px; }
   100% {
     right: 0;
     top: 0; } }
@@ -833,18 +833,22 @@ h3.section-title {
 .section-hero {
   padding-top: 8.5rem;
   z-index: 1; }
+  @media (max-width: 768px) {
+    .section-hero {
+      min-height: 100vh; } }
   .section-hero:before {
-    background: url(../img/pine.png) no-repeat right -100px top;
+    background: url(../img/decor_01.png) no-repeat right top;
+    background-size: contain;
     content: '';
     height: 318px;
     position: absolute;
     top: 0;
     right: 0;
     width: 567px;
-    animation: slideIn 1.2s ease-in-out; }
+    animation: slideIn 1.1s ease-in-out .8s; }
     @media screen and (max-width: 1024px) {
       .section-hero:before {
-        background-position: right -25px top;
+        background-position: right top;
         background-size: 328px 184px; } }
   .section-hero:after {
     content: '';
@@ -926,23 +930,23 @@ h3.section-title {
     opacity: 0;
     right: -400px;
     bottom: -50px;
-    transform: rotate(360deg) scale(0); }
+    transform: scale(0); }
   to {
     opacity: 1;
     right: 0;
     bottom: 0;
-    transform: rotate(0) scale(1); } }
+    transform: scale(1); } }
 @keyframes cardAnimation {
   from {
     opacity: 0;
     right: -400px;
     bottom: -50px;
-    transform: rotate(360deg) scale(0); }
+    transform: scale(0); }
   to {
     opacity: 1;
     right: 0;
     bottom: 0;
-    transform: rotate(0) scale(1); } }
+    transform: scale(1); } }
   .section-hero .hero-swiper-container {
     margin-left: -2rem;
     margin-right: -2rem; }
@@ -955,14 +959,16 @@ h3.section-title {
       .section-hero .hero-swiper-container .swiper-slide .box-image {
         position: absolute;
         bottom: 0;
-        left: 34%; }
+        left: 34%;
+        opacity: 0; }
       .section-hero .hero-swiper-container .swiper-slide.swiper-slide-active .box-image {
         -webkit-animation-name: cardAnimation;
         animation-name: cardAnimation;
         -webkit-animation-duration: 1s;
         animation-duration: 1s;
         -webkit-animation-fill-mode: forwards;
-        animation-fill-mode: forwards; }
+        animation-fill-mode: forwards;
+        animation-delay: .3s; }
     .section-hero .hero-swiper-container .item-image {
       text-align: center; }
     .section-hero .hero-swiper-container .item-title {
@@ -1004,7 +1010,7 @@ h3.section-title {
       .section-features .image-wrap {
         left: 0;
         top: -55px;
-        width: 310px; } }
+        width: 315px; } }
   .section-features .section-title {
     font-size: 2.8rem;
     font-weight: 400;
@@ -1021,7 +1027,9 @@ h3.section-title {
     align-items: center;
     display: flex;
     font-size: 1.5rem;
-    justify-content: space-between; }
+    justify-content: space-between;
+    margin: auto;
+    max-width: 80rem; }
     @media screen and (max-width: 880px) {
       .section-features .features-list {
         flex-direction: column; } }
@@ -1154,10 +1162,14 @@ h3.section-title {
       position: relative;
       text-align: center;
       transition: all 0.3s linear;
-      width: 34.5rem; }
+      width: 100%; }
       @media screen and (min-width: 769px) {
         .section-plans .plans-list > div {
-          padding-top: 0; } }
+          display: flex;
+          flex-direction: column;
+          padding-top: 0; }
+          .section-plans .plans-list > div .aos-init {
+            margin-top: auto; } }
       .section-plans .plans-list > div[data-aos^=fade][data-aos^=fade] {
         position: relative;
         bottom: -100px;
@@ -1176,14 +1188,8 @@ h3.section-title {
       @media screen and (min-width: 769px) {
         .section-plans .plans-list > div[data-aos][data-aos-delay="800"] *[data-aos] {
           transition-delay: .8s; } }
-      .section-plans .plans-list > div:first-child {
-        padding-top: 0; }
-      @media screen and (min-width: 769px) {
-        .section-plans .plans-list > div:last-child {
-          margin-bottom: 4rem; } }
       @media screen and (min-width: 769px) {
         .section-plans .plans-list > div {
-          padding-bottom: 7rem;
           width: 32%; } }
       .section-plans .plans-list > div .picture {
         position: relative;
@@ -1252,16 +1258,18 @@ h3.section-title {
         margin-top: 1.5rem; } }
     @media screen and (min-width: 1101px) {
       .section-plans .plans-list .plan-image {
-        min-height: 32rem; } }
+        min-height: 35rem; } }
     .section-plans .plans-list .plan-info {
       margin-top: .8rem;
       margin-bottom: 2rem;
       padding: 0 1.5rem; }
       @media screen and (min-width: 769px) {
         .section-plans .plans-list .plan-info {
-          margin-top: -.7rem; } }
+          margin-top: -.7rem;
+          min-height: 10.5rem; } }
     .section-plans .plans-list .plan-features {
-      margin-bottom: 1rem; }
+      margin-bottom: 1rem;
+      min-height: 19rem; }
       .section-plans .plans-list .plan-features ul {
         list-style: none;
         padding-left: 1.2rem;
@@ -1326,7 +1334,6 @@ h3.section-title {
         .section-plans .plans-list .btn {
           bottom: 0;
           left: 0;
-          position: absolute;
           width: 100%; } }
       @media screen and (min-width: 710px) and (max-width: 1024px) {
         .section-plans .plans-list .btn {
@@ -1455,7 +1462,7 @@ h3.section-title {
       margin-right: 8%;
       text-align: left;
       max-width: 485px;
-      padding-top: 3.5rem;
+      padding-top: 2.5%;
       width: 42%; } }
   .section-text .right {
     width: 50%; }
@@ -1560,9 +1567,6 @@ h3.section-title {
   font-size: 1.1rem;
   font-weight: normal;
   line-height: 1.33; }
-  @media screen and (min-width: 769px) {
-    .section-quote {
-      display: none; } }
   .section-quote .quote {
     background: url(../img/bg/bg_testimonial.png) no-repeat right 2rem;
     max-width: 60rem;

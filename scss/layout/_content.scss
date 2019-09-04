@@ -21,6 +21,10 @@ h3.section-title {
   padding-top: 8.5rem;
   z-index: 1;
 
+  @media (max-width: 768px) {
+    min-height: 100vh;
+  }
+
   &:before {
     background: url(../img/decor_01.png) no-repeat right top;
     background-size: contain;
