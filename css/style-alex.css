@@ -16,6 +16,7 @@
 
     .section-plans.active .plans-transparent-bg {
         opacity: 1;
+        transition: all .5s;
         z-index: 8;
     }
 
@@ -269,11 +270,57 @@
             .plan-dots .plan-dot .dot-content .btn-close {
                 background: url(../img/icons/icon-close.svg) no-repeat center;
                 height: 24px;
-                position: absolute;
+                margin-left: 20px;
+                /*position: absolute;
                 top: 105%;
-                right: 30px;
+                right: 30px;*/
                 width: 24px;
             }
+
+        .plan-dot .dot-content .arrows {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            margin: 20px 0 10px;
+        }
+
+            .plan-dot .dot-content .arrows a.js-dotNav {
+                align-items: center;
+                background: rgba(255, 255, 255, .7);
+                border-radius: 100%;
+                display: flex;
+                height: 50px;
+                line-height: 40px;
+                justify-content: center;
+                transition: all .5s;
+                width: 50px;
+            }
+
+            .plan-dot .dot-content .arrows a.js-dotNav:hover {
+                background: rgba(255, 255, 255, 1);
+            }
+
+            .plan-dot .dot-content .arrows a.js-dotNav:active {
+                background: rgba(255, 255, 255, .1);
+            }
+
+                .plan-dot .dot-content .arrows a.js-dotNav:after {
+                    background: url(../img/icons/arrow.svg) no-repeat center;
+                    background-size: contain;
+                    display: block;
+                    height: 20px;
+                    content: '';
+                    transform: rotate(180deg);
+                    width: 20px;
+                }
+
+                .plan-dot .dot-content .arrows a.js-dotNav + .js-dotNav:after {
+                    transform: rotate(0);
+                }
+
+                .plan-dot .dot-content .arrows a + a {
+                    margin-left: 10px;
+                }
 
 
 /* TESTIMONIALS */
