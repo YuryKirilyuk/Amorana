@@ -884,7 +884,7 @@ h3.section-title { font-size: 2.4rem; font-weight: normal; margin-bottom: 1.5rem
 
 .section-quote { font-family: 'Palatino', serif; font-style: italic; font-size: 1.1rem; font-weight: normal; line-height: 1.33; }
 
-.section-quote .quote { background: url(../img/bg/bg_testimonial.png) no-repeat right 2rem; max-width: 60rem; margin: auto; padding: 13rem 11.5rem 8rem 0; }
+.section-quote .quote { background: url(../img/bg/bg_testimonial.svg) no-repeat right top; max-width: 60rem; margin: auto; padding: 13rem 11.5rem 8rem 0; }
 
 @media screen and (max-width: 580px) { .section-quote .quote { margin: 0 -1rem; } }
 
