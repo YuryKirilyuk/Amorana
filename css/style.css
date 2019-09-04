@@ -592,7 +592,7 @@ h3.section-title { font-size: 2.4rem; font-weight: normal; margin-bottom: 1.5rem
 
 .section-info { padding: 5rem 0 3rem; text-align: center; }
 
-.section-info .wrapper { max-width: 1024px; margin: auto; }
+.section-info .wrapper { max-width: 1024px; margin: auto; width: 80%; }
 
 .section-info > .image-wrap { left: -10px; position: absolute; top: 5rem; width: 150px; }
 
