@@ -19,6 +19,11 @@ $(document).ready(function(){
             let dotBgX = -((6000 / 2) - (dWidth / 2) - (el.offset().left - (dWidth / 2)) - (el.outerWidth() / 2)),
                 dotBgY = -((3000 / 2) - (dHeight / 2) - (el.offset().top - dots.offset().top - (dHeight / 2)) - (el.outerHeight() / 2));
 
+            if($(window).width() < 550){
+                dotBgX = -((3000 / 2) - (dWidth / 2) - (el.offset().left - (dWidth / 2)) - (el.outerWidth() / 2));
+                dotBgY = -((1500 / 2) - (dHeight / 2) - (el.offset().top - dots.offset().top - (dHeight / 2)) - (el.outerHeight() / 2));
+            }
+
             dots.find('.dots-item').removeClass('active');
             dot.addClass('active');
             dots.addClass('active');
@@ -29,7 +34,12 @@ $(document).ready(function(){
                 dHeight = dots.height();
                 dWidth = dots.width();
                 dotBgX = -((6000 / 2) - (dWidth / 2) - (el.offset().left - (dWidth / 2)) - (el.outerWidth() / 2));
-                    dotBgY = -((3000 / 2) - (dHeight / 2) - (el.offset().top - dots.offset().top - (dHeight / 2)) - (el.outerHeight() / 2));
+                dotBgY = -((3000 / 2) - (dHeight / 2) - (el.offset().top - dots.offset().top - (dHeight / 2)) - (el.outerHeight() / 2));
+
+                if($(window).width() < 550){
+                    dotBgX = -((3000 / 2) - (dWidth / 2) - (el.offset().left - (dWidth / 2)) - (el.outerWidth() / 2));
+                    dotBgY = -((1500 / 2) - (dHeight / 2) - (el.offset().top - dots.offset().top - (dHeight / 2)) - (el.outerHeight() / 2));
+                }
 
                 dotBg.css({backgroundPosition: dotBgX + 'px ' + dotBgY + 'px'});
             });
