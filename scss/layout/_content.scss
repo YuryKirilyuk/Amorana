@@ -1025,6 +1025,11 @@ h3.section-title {
 
   @media screen and (min-width: 769px) {
     //display: none;
+    margin-top: 100px;
+  }
+  .wrapper {
+    max-width: 1210px;
+    padding: 0;
   }
 
   .quote {
@@ -1034,10 +1039,20 @@ h3.section-title {
     padding: 13rem 11.5rem 8rem 0;
     @media screen and (max-width: 580px) {margin: 0 -1rem;}
 
+    @media screen and (min-width: 769px) {
+      max-width: none;
+      padding-right: 20rem;
+    }
+
     blockquote {
       font-size: 1.5rem;
       margin-left: 3rem;
       position: relative;
+
+      @media screen and (min-width: 769px) {
+        font-size: 3rem;
+      }
+
       &:before {
         position: absolute;
         content: '';

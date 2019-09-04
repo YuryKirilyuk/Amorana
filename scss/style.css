@@ -1567,6 +1567,12 @@ h3.section-title {
   font-size: 1.1rem;
   font-weight: normal;
   line-height: 1.33; }
+  @media screen and (min-width: 769px) {
+    .section-quote {
+      margin-top: 100px; } }
+  .section-quote .wrapper {
+    max-width: 1210px;
+    padding: 0; }
   .section-quote .quote {
     background: url(../img/bg/bg_testimonial.png) no-repeat right 2rem;
     max-width: 60rem;
@@ -1575,10 +1581,17 @@ h3.section-title {
     @media screen and (max-width: 580px) {
       .section-quote .quote {
         margin: 0 -1rem; } }
+    @media screen and (min-width: 769px) {
+      .section-quote .quote {
+        max-width: none;
+        padding-right: 20rem; } }
     .section-quote .quote blockquote {
       font-size: 1.5rem;
       margin-left: 3rem;
       position: relative; }
+      @media screen and (min-width: 769px) {
+        .section-quote .quote blockquote {
+          font-size: 3rem; } }
       .section-quote .quote blockquote:before {
         position: absolute;
         content: '';
