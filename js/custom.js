@@ -63,6 +63,12 @@ $(window).on('load', function () {
 
 $(function(){
 
+    $('.section-hero .btn').click(function(){
+        var target = $(this).attr('href');
+        $('html, body').animate({scrollTop: $(target).offset().top}, 500);
+        return false;
+    });
+
     $('.plans-nav a[href^="#"]').click(function(){
         var target = $(this).attr('href');
         if($(window).width() <= '768') {
