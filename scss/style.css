@@ -792,21 +792,6 @@ img {
   100% {
     right: 0;
     top: 0; } }
-.site-footer {
-  background: #000;
-  color: #ccc;
-  font-family: "HelveticaNeueCyr", sans-serif;
-  font-size: 1.2rem;
-  line-height: 1.8;
-  padding: 1.5rem 0;
-  text-align: center; }
-  @media screen and (min-width: 769px) {
-    .site-footer .wrapper {
-      align-items: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: center; } }
-
 main.content {
   overflow: hidden; }
 
@@ -1625,41 +1610,43 @@ h3.section-title {
       margin: 1rem 0 0;
       text-align: right; }
 
+/*
 .section-socials {
-  background: #A8A8A8;
-  padding: 2.5rem 0; }
-  .section-socials .wrapper {
+  background: $grey;
+  padding: 2.5rem 0;
+
+  .wrapper {
     align-items: center;
     display: flex;
     justify-content: space-around;
-    line-height: 1; }
+    line-height: 1;
     @media screen and (min-width: 769px) {
-      .section-socials .wrapper {
-        justify-content: center; }
-        .section-socials .wrapper a {
-          margin: 0 3rem; } }
-  @media screen and (min-width: 769px) {
-    .section-socials.aos-animate [data-aos^=fade][data-aos^=fade].aos-init {
-      opacity: 1;
-      transform: translateZ(0); } }
-  .section-socials svg {
-    fill: #fff;
-    transition: all 0.3s linear; }
-    .section-socials svg:hover {
-      fill: #e2e2e2; }
-    .section-socials svg.icon-instagram {
-      height: 31px;
-      width: 28px; }
-    .section-socials svg.icon-facebook {
-      height: 27px;
-      width: 26px; }
-    .section-socials svg.icon-twitter {
-      height: 24px;
-      width: 29px; }
-    .section-socials svg.icon-you-tube {
-      height: 23px;
-      width: 29px; }
+      justify-content: center;
+      a {
+        margin: 0 3rem;
+      }
+    }
+  }
 
+  &.aos-animate {
+    [data-aos^=fade][data-aos^=fade].aos-init {
+      @media screen and (min-width: 769px) {
+        opacity: 1;
+        transform: translateZ(0);
+      }
+    }
+  }
+
+  svg {
+    fill: $white;
+    transition: $default-transition;
+    &:hover {fill: $light-grey;}
+    &.icon-instagram {height: 31px; width: 28px;}
+    &.icon-facebook {height: 27px; width: 26px;}
+    &.icon-twitter {height: 24px; width: 29px;}
+    &.icon-you-tube {height: 23px; width: 29px;}
+  }
+}*/
 .btn {
   background: #FC2D4D;
   border: none;
@@ -1677,6 +1664,8 @@ h3.section-title {
   .btn:hover {
     background: #f30328;
     box-shadow: 0 0 20px -5px rgba(0, 0, 0, 0.5); }
+  .btn:focus {
+    color: #fff; }
   @media screen and (max-width: 480px) {
     .btn {
       width: 100%; } }
@@ -1691,45 +1680,5 @@ h3.section-title {
     fill: #FC2D4D;
     height: 100%;
     width: 100%; }
-
-.menu-toggle {
-  background: none;
-  border: none;
-  position: relative;
-  height: 7rem;
-  width: 7rem; }
-  @media screen and (min-width: 768px) {
-    .menu-toggle {
-      display: none; } }
-  .menu-toggle:hover .navigation-icon:before {
-    top: -1rem; }
-  .menu-toggle:hover .navigation-icon:after {
-    top: 1rem; }
-  .menu-toggle.active .navigation-icon {
-    background-color: transparent; }
-    .menu-toggle.active .navigation-icon:before {
-      top: 0;
-      transform: rotate(135deg); }
-    .menu-toggle.active .navigation-icon:after {
-      top: 0;
-      transform: rotate(-135deg); }
-
-.navigation-icon {
-  margin-top: 3.5rem;
-  position: relative; }
-  .navigation-icon, .navigation-icon:before, .navigation-icon:after {
-    background-color: #333;
-    display: inline-block;
-    height: 2px;
-    width: 3rem; }
-  .navigation-icon:before, .navigation-icon:after {
-    content: "";
-    left: 0;
-    position: absolute;
-    transition: all 0.3s linear; }
-  .navigation-icon:before {
-    top: -.8rem; }
-  .navigation-icon:after {
-    top: .8rem; }
 
 /*# sourceMappingURL=style.css.map */
