@@ -81,7 +81,9 @@ h3.section-title {
   }
 
   .hero-right {
-    margin-bottom: -5.5rem;
+    @media screen and (min-width: 1025px) {
+      margin-bottom: -5.5rem;
+    }
   }
 
   .logo {
@@ -236,15 +238,20 @@ h3.section-title {
 }//.section-hero
 
 
-
-.section-features {
-  padding: 11rem 0 2.5rem;
+.section-info {
+  padding: 5rem 0 3rem;
   text-align: center;
 
-  .image-wrap {
+  .wrapper {
+    max-width: 1024px;
+    margin: auto;
+    width: 80%;
+  }
+
+  > .image-wrap {
     left: -10px;
     position: absolute;
-    top: 13rem;
+    top: 5rem;
     width: 150px;
     @media screen and (min-width: 1024px) {
       left: 0;
@@ -252,6 +259,29 @@ h3.section-title {
       width: 315px;
     }
   }
+
+  .section-title {
+    font-size: 2.8rem;
+    margin-bottom: 2rem;
+    @media screen and (min-width: 769px) {
+      font-size: 3.6rem;
+      font-weight: 300;
+    }
+  }
+
+  p {
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+}//.section-info
+
+
+.section-features {
+  padding: 5rem 0 2.5rem;
+  text-align: center;
 
   .section-title {
     font-size: 2.8rem;
@@ -311,7 +341,7 @@ h3.section-title {
     }
   }//.features-list
 
-}//.section-gallery
+}//.section-features
 
 
 .section-plans {
@@ -865,10 +895,12 @@ h3.section-title {
 
   .wrapper {
     @media screen and (min-width: 981px) {
-      display: flex;
-      max-width: 1440px;
-      justify-content: flex-end;
-      padding: 0;
+      &.flex {
+        display: flex;
+        max-width: 1440px;
+        justify-content: flex-end;
+        padding: 0;
+      }
     }
   }
 
@@ -1033,7 +1065,7 @@ h3.section-title {
   }
 
   .quote {
-    background: url(../img/bg/bg_testimonial.png) no-repeat right 2rem;
+    background: url(../img/bg/bg_testimonial.svg) no-repeat right top;
     max-width: 60rem;
     margin: auto;
     padding: 13rem 11.5rem 8rem 0;

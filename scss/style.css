@@ -881,8 +881,9 @@ h3.section-title {
     @media screen and (max-width: 1024px) {
       .section-hero .hero-left {
         margin: auto; } }
-  .section-hero .hero-right {
-    margin-bottom: -5.5rem; }
+  @media screen and (min-width: 1025px) {
+    .section-hero .hero-right {
+      margin-bottom: -5.5rem; } }
   .section-hero .logo {
     margin-bottom: .8rem; }
     @media screen and (min-width: 1025px) {
@@ -998,19 +999,39 @@ h3.section-title {
       .section-hero .hero-swiper-container .swiper-pagination-bullet.swiper-pagination-bullet-active {
         opacity: 1; }
 
-.section-features {
-  padding: 11rem 0 2.5rem;
+.section-info {
+  padding: 5rem 0 3rem;
   text-align: center; }
-  .section-features .image-wrap {
+  .section-info .wrapper {
+    max-width: 1024px;
+    margin: auto;
+    width: 80%; }
+  .section-info > .image-wrap {
     left: -10px;
     position: absolute;
-    top: 13rem;
+    top: 5rem;
     width: 150px; }
     @media screen and (min-width: 1024px) {
-      .section-features .image-wrap {
+      .section-info > .image-wrap {
         left: 0;
         top: -55px;
         width: 315px; } }
+  .section-info .section-title {
+    font-size: 2.8rem;
+    margin-bottom: 2rem; }
+    @media screen and (min-width: 769px) {
+      .section-info .section-title {
+        font-size: 3.6rem;
+        font-weight: 300; } }
+  .section-info p {
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 22px; }
+
+.section-features {
+  padding: 5rem 0 2.5rem;
+  text-align: center; }
   .section-features .section-title {
     font-size: 2.8rem;
     font-weight: 400;
@@ -1452,7 +1473,7 @@ h3.section-title {
       padding-top: 15rem;
       padding-bottom: 13rem; } }
   @media screen and (min-width: 981px) {
-    .section-text .wrapper {
+    .section-text .wrapper.flex {
       display: flex;
       max-width: 1440px;
       justify-content: flex-end;
@@ -1574,7 +1595,7 @@ h3.section-title {
     max-width: 1210px;
     padding: 0; }
   .section-quote .quote {
-    background: url(../img/bg/bg_testimonial.png) no-repeat right 2rem;
+    background: url(../img/bg/bg_testimonial.svg) no-repeat right top;
     max-width: 60rem;
     margin: auto;
     padding: 13rem 11.5rem 8rem 0; }
