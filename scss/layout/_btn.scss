@@ -1,7 +1,7 @@
 .btn {
   background: $red;
   border: none;
-  color: #fff !important;
+  color: #fff;
   display: block;
   font-size: 1.6rem;
   height: 5rem;
@@ -16,6 +16,9 @@
     background: darken($red, 10%);
     box-shadow: 0 0 20px -5px rgba(0,0,0,.5);
     //transform: scale(1.05) !important;
+  }
+  &:focus {
+    color: #fff;
   }
   @media screen and (max-width: 480px) {
     width: 100%;

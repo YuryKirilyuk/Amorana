@@ -935,9 +935,11 @@ h3.section-title { font-size: 2.4rem; font-weight: normal; margin-bottom: 1.5rem
     &.icon-you-tube {height: 23px; width: 29px;}
   }
 }*/
-.btn { background: #FC2D4D; border: none; color: #fff !important; display: block; font-size: 1.6rem; height: 5rem; line-height: 5rem; margin: 2rem auto; max-width: 28rem; min-width: 28rem; text-transform: uppercase; text-align: center; transition: all 0.3s linear !important; }
+.btn { background: #FC2D4D; border: none; color: #fff; display: block; font-size: 1.6rem; height: 5rem; line-height: 5rem; margin: 2rem auto; max-width: 28rem; min-width: 28rem; text-transform: uppercase; text-align: center; transition: all 0.3s linear !important; }
 
 .btn:hover { background: #f30328; box-shadow: 0 0 20px -5px rgba(0, 0, 0, 0.5); }
+
+.btn:focus { color: #fff; }
 
 @media screen and (max-width: 480px) { .btn { width: 100%; } }
 
