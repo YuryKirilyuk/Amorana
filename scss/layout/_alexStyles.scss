@@ -1,0 +1,377 @@
+.section-plans {
+  overflow: hidden;
+  position: relative;
+}
+
+.plans-transparent-bg {
+  background: url(https://www.amorana.ch/media/advent/img/transparent-bg-mob.png) repeat center;
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity .5s;
+  width: 100%;
+  width: 100vw;
+}
+
+@media (min-width: 550px){
+  .plans-transparent-bg {
+    background-image: url(https://www.amorana.ch/media/advent/img/transparent-bg.png);
+  }
+}
+
+.section-plans.active .plans-transparent-bg {
+  opacity: 1;
+  transition: all .5s;
+  z-index: 8;
+}
+
+.section-plans .plan-image {
+  position: relative;
+}
+
+.section-plans .plan-dots {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.plan-dots .plan-dot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 0;
+}
+
+.plan-dots .plan-dot.active {
+  z-index: 8;
+}
+
+.plan-dots .plan-dot.first {
+  top: 1vw;
+}
+
+.plan-dots .plan-dot.second {
+  top: 25vw;
+}
+
+.plan-dots .plan-dot.third {
+  top: 14vw;
+}
+
+.premium-plan .plan-dots .plan-dot.first {
+  top: 0;
+}
+
+.premium-plan .plan-dots .plan-dot.second {
+  top: 26vw;
+}
+
+.premium-plan .plan-dots .plan-dot.third {
+  top: 12vw;
+}
+
+.deluxe-plan .plan-dots .plan-dot.first {
+  top: 7vw;
+}
+
+.deluxe-plan .plan-dots .plan-dot.second {
+  top: 32vw;
+}
+
+.deluxe-plan .plan-dots .plan-dot.third {
+  top: 20vw;
+}
+
+@media (min-width: 374px){
+  .plan-dots .plan-dot.first {
+    top: 10px;
+  }
+
+  .plan-dots .plan-dot.second {
+    top: 100px;
+  }
+
+  .plan-dots .plan-dot.third {
+    top: 60px;
+  }
+
+  .premium-plan .plan-dots .plan-dot.first {
+    top: 0;
+  }
+
+  .premium-plan .plan-dots .plan-dot.second {
+    top: 95px;
+  }
+
+  .premium-plan .plan-dots .plan-dot.third {
+    top: 45px;
+  }
+
+  .deluxe-plan .plan-dots .plan-dot.first {
+    top: 25px;
+  }
+
+  .deluxe-plan .plan-dots .plan-dot.second {
+    top: 120px;
+  }
+
+  .deluxe-plan .plan-dots .plan-dot.third {
+    top: 75px;
+  }
+}
+
+.plan-dots .plan-dot .dot {
+  background: rgba(225, 0, 49, 0.7);
+  border: 2px solid #fff;
+  border-radius: 100%;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+  height: 30px;
+  position: absolute;
+  top: 0;
+  transition: all .5s;
+  width: 30px;
+  z-index: 1;
+}
+
+.plan-dots .plan-dot .dot:hover {
+  transform: scale(1.2);
+}
+
+.plan-dots .plan-dot.active .dot:hover {
+  transform: scale(1);
+}
+
+.plan-dots .plan-dot.first .dot {
+  left: 51%;
+}
+
+.plan-dots .plan-dot.second .dot {
+  left: 26%;
+}
+
+.plan-dots .plan-dot.third .dot {
+  left: 66%;
+}
+
+.premium-plan .plan-dots .plan-dot.first .dot {
+  left: 52%;
+}
+
+.premium-plan .plan-dots .plan-dot.second .dot {
+  left: 22%;
+}
+
+.premium-plan .plan-dots .plan-dot.third .dot {
+  left: 67%;
+}
+
+.deluxe-plan .plan-dots .plan-dot.first .dot {
+  left: 51%;
+}
+
+.deluxe-plan .plan-dots .plan-dot.second .dot {
+  left: 18%;
+}
+
+.deluxe-plan .plan-dots .plan-dot.third .dot {
+  left: 68%;
+}
+
+@media screen and (min-width: 1101px) {
+  .plan-dots .plan-dot.first .dot {
+    left: 170px;
+  }
+
+  .plan-dots .plan-dot.second .dot {
+    left: 85px;
+  }
+
+  .plan-dots .plan-dot.third .dot {
+    left: 220px;
+  }
+
+  .premium-plan .plan-dots .plan-dot.first .dot {
+    left: 175px;
+  }
+
+  .premium-plan .plan-dots .plan-dot.second .dot {
+    left: 75px;
+  }
+
+  .premium-plan .plan-dots .plan-dot.third .dot {
+    left: 225px;
+  }
+
+  .deluxe-plan .plan-dots .plan-dot.first .dot {
+    left: 170px;
+  }
+
+  .deluxe-plan .plan-dots .plan-dot.second .dot {
+    left: 60px;
+  }
+
+  .deluxe-plan .plan-dots .plan-dot.third .dot {
+    left: 235px;
+  }
+}
+
+.plan-dots .plan-dot.active .dot {
+  background: rgba(255, 255, 255, .9);
+  border-color: rgba(255, 255, 255, .9);
+}
+
+.plan-dots .plan-dot .dot:before {
+  background: #fff;
+  border-radius: 100%;
+  content: '';
+  height: 12px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: all .5s;
+  width: 12px;
+}
+
+.plan-dots .plan-dot.active .dot:before {background: #FF0000;}
+
+.plan-dots .plan-dot .dot:after {
+  background: url(https://www.amorana.ch/media/advent/img/dot-arrow.svg) center no-repeat;
+  content: '';
+  height: 98px;
+  opacity: 0;
+  position: absolute;
+  top: 12px;
+  left: -12px;
+  transition: all .5s;
+  width: 25px;
+}
+
+.plan-dots .plan-dot.active .dot:after {
+  opacity: 1;
+}
+
+.plan-dots .plan-dot .dot-content {
+  color: #fff;
+  display: none;
+  font-size: 14px;
+  line-height: 21px;
+  opacity: 0;
+  padding: 125px 30px 0;
+  transform: scale(0);
+  transition: all .5s;
+}
+
+.plan-dots .plan-dot.active .dot-content {
+  display: block;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.plan-dots .plan-dot .dot-content .btn-close {
+  background: url(https://www.amorana.ch/media/advent/img/icons/icon-close.svg) no-repeat center;
+  height: 24px;
+  margin-left: 20px;
+  /*position: absolute;
+  top: 105%;
+  right: 30px;*/
+  width: 24px;
+}
+
+.plan-dot .dot-content .arrows {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0 10px;
+}
+
+.plan-dot .dot-content .arrows a.js-dotNav {
+  align-items: center;
+  background: rgba(255, 255, 255, .7);
+  border-radius: 100%;
+  display: flex;
+  height: 50px;
+  line-height: 40px;
+  justify-content: center;
+  transition: all .5s;
+  width: 50px;
+}
+
+.plan-dot .dot-content .arrows a.js-dotNav:hover {
+  background: rgba(255, 255, 255, 1);
+}
+
+.plan-dot .dot-content .arrows a.js-dotNav:active {
+  background: rgba(255, 255, 255, .1);
+}
+
+.plan-dot .dot-content .arrows a.js-dotNav:after {
+  background: url(https://www.amorana.ch/media/advent/img/icons/arrow.svg) no-repeat center;
+  background-size: contain;
+  display: block;
+  height: 20px;
+  content: '';
+  transform: rotate(180deg);
+  width: 20px;
+}
+
+.plan-dot .dot-content .arrows a.js-dotNav + .js-dotNav:after {
+  transform: rotate(0);
+}
+
+.plan-dot .dot-content .arrows a + a {
+  margin-left: 10px;
+}
+
+
+/* TESTIMONIALS */
+
+.section-testimonials {
+  background-image: none;
+  padding: 45px 0 85px;
+}
+
+.section-testimonials .quote-pic {display: none;}
+
+.section-testimonials .quote-pic img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+@media (min-width: 768px){
+  .section-testimonials {
+    margin-bottom: 70px;
+    padding: 0;
+  }
+
+  .section-testimonials .wrapper {
+    display: flex;
+    max-width: none;
+    padding: 0;
+  }
+
+  .section-testimonials .quote-wrapper {
+    padding: 60px 0;
+    width: 50%;
+  }
+
+  .section-testimonials .quote-wrapper > * {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 340px;
+  }
+
+  .section-testimonials .quote-pic {
+    display: block;
+    width: 50%;
+  }
+
+}

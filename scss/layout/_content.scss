@@ -26,7 +26,7 @@ h3.section-title {
   }
 
   &:before {
-    background: url(../img/decor_01.png) no-repeat right top;
+    background: url(https://www.amorana.ch/media/advent/img/decor_01.png) no-repeat right top;
     background-size: contain;
     content: '';
     height: 318px;
@@ -305,7 +305,7 @@ h3.section-title {
     @media screen and (max-width: 880px) {flex-direction: column;}
 
     .feature {
-      background: url(../img/plants.svg) no-repeat center top;
+      background: url(https://www.amorana.ch/media/advent/img/plants.svg) no-repeat center top;
       max-width: 19.5rem;
       padding-bottom: 1rem;
       padding-top: 2.3rem;
@@ -333,7 +333,7 @@ h3.section-title {
           padding-top: 0;
 
           @media screen and (min-width: 881px) {
-            background: url(../img/plants.svg) no-repeat center top;
+            background: url(https://www.amorana.ch/media/advent/img/plants.svg) no-repeat center top;
             padding-top: 2.3rem;
           }
         }
@@ -788,7 +788,7 @@ h3.section-title {
 
 
 .section-testimonials {
-  background: #F6F6F6 url(../img/img_quote.png) no-repeat center 45px;
+  background: #F6F6F6 url(https://www.amorana.ch/media/advent/img/img_quote.png) no-repeat center 45px;
   padding: 140px 0 85px;
   text-align: center;
 
@@ -861,7 +861,7 @@ h3.section-title {
     }
 
     .play-button {
-      background: url(../img/icons/icon-play.svg) no-repeat center;
+      background: url(https://www.amorana.ch/media/advent/img/icons/icon-play.svg) no-repeat center;
       background-size: contain;
       height: 60px;
       margin: auto;
@@ -1065,7 +1065,7 @@ h3.section-title {
   }
 
   .quote {
-    background: url(../img/bg/bg_testimonial.svg) no-repeat right top;
+    background: url(https://www.amorana.ch/media/advent/img/bg/bg_testimonial.svg) no-repeat right top;
     max-width: 60rem;
     margin: auto;
     padding: 13rem 11.5rem 8rem 0;
@@ -1088,7 +1088,7 @@ h3.section-title {
       &:before {
         position: absolute;
         content: '';
-        background: url(../img/icons/icon-quotes.svg) no-repeat center;
+        background: url(https://www.amorana.ch/media/advent/img/icons/icon-quotes.svg) no-repeat center;
         height: 3.5rem;
         top: -4.8rem;
         left: 2rem;
@@ -1104,43 +1104,3 @@ h3.section-title {
   }//.quote
 
 }//.section-quote
-
-
-
-/*
-.section-socials {
-  background: $grey;
-  padding: 2.5rem 0;
-
-  .wrapper {
-    align-items: center;
-    display: flex;
-    justify-content: space-around;
-    line-height: 1;
-    @media screen and (min-width: 769px) {
-      justify-content: center;
-      a {
-        margin: 0 3rem;
-      }
-    }
-  }
-
-  &.aos-animate {
-    [data-aos^=fade][data-aos^=fade].aos-init {
-      @media screen and (min-width: 769px) {
-        opacity: 1;
-        transform: translateZ(0);
-      }
-    }
-  }
-
-  svg {
-    fill: $white;
-    transition: $default-transition;
-    &:hover {fill: $light-grey;}
-    &.icon-instagram {height: 31px; width: 28px;}
-    &.icon-facebook {height: 27px; width: 26px;}
-    &.icon-twitter {height: 24px; width: 29px;}
-    &.icon-you-tube {height: 23px; width: 29px;}
-  }
-}*/

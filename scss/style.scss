@@ -1,6 +1,6 @@
 @import 'utils/variables';
 @import 'utils/mixins';
-@import 'utils/helpers';
+//@import 'utils/helpers';
 
 @import "base/reset";
 @import "base/fonts";
@@ -15,10 +15,12 @@
 
 @import "layout/common";
 @import "layout/animation";
-@import "layout/header";
+//@import "layout/header";
 //@import "layout/footer";
 @import "layout/content";
 @import "layout/btn";
 //@import "layout/partials";
 //@import "layout/forms";
 
+
+@import "layout/alexStyles";
